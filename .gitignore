@@ -1,0 +1,129 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Project specific
+logs/
+data/raw/
+data/processed/
+data/buffer/
+# 7+ GB dataset — re-downloadable via scripts/download_urbansound8k.py
+data/urbansound8k/
+# regeneratable via scripts/fetch_vggsound_thumbnails.py
+data/vggsound/thumbnails/
+data/vggsound/manifest.json
+data/vggsound/label_noise_results.json
+models/*.h5
+models/*.tflite
+models/*.pt
+# trained Keras models — reproducible via training scripts
+models/*.keras
+models/checkpoints/
+# experiment run outputs (root-level only; src/experiments/ is code and stays tracked)
+/results/
+# numpy archive caches — reproducible
+*.npz
+*.csv
+*.json.bak
+# personal thesis reference docs
+additional docs/
+
+# Secrets
+*.pem
+*.key
+credentials.yaml
+secrets.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TensorBoard
+runs/
+tensorboard_logs/
+
+# Large files
+*.tar.gz
+*.zip
+*.mp4
+*.wav
+*.mp3
+.claude/
+*.egg-info/
+data/vggsound/
+
+# raw sensor dumps pulled off the Pi edge node — regenerable via scripts/pull_from_pi.sh
+data/pi_captures/images/
+data/pi_captures/audio/
+data/pi_captures/evidence/
+data/pi_captures/results/
+
+# Stray wheel files
+*.whl

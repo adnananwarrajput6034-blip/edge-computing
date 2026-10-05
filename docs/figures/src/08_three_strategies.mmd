@@ -1,0 +1,15 @@
+flowchart LR
+    subgraph A["A: Centralized"]
+        direction TB
+        a1["Edge: record + label"] -->|"raw audio"| a2["Server: STFT + train + evaluate"]
+    end
+    subgraph B["B: Hybrid"]
+        direction TB
+        b1["Edge: record + label + STFT"] -->|"spectrograms"| b2["Server: train + evaluate"]
+    end
+    subgraph C["C: Federated"]
+        direction TB
+        c1["Edge: record + label + STFT + train"] -->|"weights only"| c2["Server: FedAvg + evaluate"]
+        c2 -->|"global weights"| c1
+    end
+    A ~~~ B ~~~ C

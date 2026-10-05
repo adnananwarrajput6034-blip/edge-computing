@@ -1,0 +1,6 @@
+flowchart LR
+    w["Waveform<br/>8,000 samples"] --> f["Cut into frames<br/>25 ms window, 10 ms hop<br/>-> 51 frames"]
+    f --> fft["FFT per frame<br/>n_fft = 512<br/>-> 257 bins"]
+    fft --> mel["Mel filter bank<br/>-> 128 bands"]
+    mel --> db["Power -> dB<br/>scale to 0..1"]
+    db --> s["Spectrogram<br/>51 x 128"]

@@ -1,0 +1,11 @@
+flowchart TB
+    enr["1. Enrollment on the Pi<br/>camera + mic + YOLOv8<br/>247 ticks, 160 labelled"] --> ds[("Live dataset<br/>car / cell phone / person<br/>96 train, 32 test")]
+    ds --> ca["2a. A client<br/>sends raw audio"]
+    ds --> cb["2b. B client<br/>STFT, sends spectrograms"]
+    ds --> cc["2c. C client<br/>trains locally, sends weights"]
+    ca --> br[("MQTT broker (laptop)")]
+    cb --> br
+    cc --> br
+    br --> sv["3. Unchanged server (laptop)<br/>train or FedAvg, evaluate"]
+    sv --> mdl["Trained model"]
+    mdl -- "copied back to the Pi" --> inf["4. Live inference on the Pi<br/>mic -> audio model<br/>'unknown' below threshold"]

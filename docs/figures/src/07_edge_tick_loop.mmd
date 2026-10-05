@@ -1,0 +1,13 @@
+flowchart TD
+    start(["Every 500 ms (one tick)"]) --> rec["Record 500 ms audio<br/>(8,000 samples, 16 kHz)"]
+    rec --> grab["Grab one camera frame"]
+    grab --> yolo["Run YOLOv8 on frame"]
+    yolo --> q{"Object found with<br/>confidence >= 0.5?"}
+    q -- no --> skip["Skip tick<br/>(no label, no sample)"]
+    q -- yes --> drop["Discard the image"]
+    drop --> buf["Store (audio, label)<br/>in local buffer"]
+    buf --> full{"Buffer has<br/>500 samples?"}
+    full -- no --> start
+    skip --> start
+    full -- yes --> send["Pack (NumPy binary) -> zlib -> MQTT publish<br/>then clear buffer"]
+    send --> start

@@ -1,0 +1,9 @@
+flowchart TB
+    img["Camera image<br/>224 x 224 x 3"] --> mnet["MobileNetV3-Small<br/>pre-trained, FROZEN"]
+    mnet --> fv["Feature vector<br/>576 numbers"]
+    fv --> vp["Dense 256<br/>vision projection (trained)"]
+    spec["Spectrogram<br/>51 x 128 x 1"] --> conv["3 x (Conv 3x3 + BatchNorm + ReLU + MaxPool)<br/>audio branch (trained)"]
+    conv --> gap["Global average pooling"] --> ap["Dense 128<br/>audio projection (trained)"]
+    vp --> cat["Concatenate<br/>256 + 128 = 384"]
+    ap --> cat
+    cat --> h1["Dense 256 + Dropout 0.3"] --> h2["Dense 128 + Dropout 0.3"] --> out["Softmax<br/>5 classes"]

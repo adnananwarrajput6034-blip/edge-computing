@@ -1,0 +1,19 @@
+flowchart TB
+    subgraph FB["FB: Hybrid fusion (server trains)"]
+        direction TB
+        subgraph FBE["Edge"]
+            fbcam["Camera"] --> fbm["MobileNetV3 (frozen)"] --> fbfv["576-number feature vector"]
+            fbmic["Mic"] --> fbs["STFT"] --> fbsp["Spectrogram"]
+        end
+        fbfv -->|"FV + spectrogram<br/>(image never sent)"| fbsv["Server: projection + audio branch<br/>+ fusion head are TRAINED here"]
+    end
+    subgraph FC["FC: Federated fusion (edges train)"]
+        direction TB
+        subgraph FCE["Edge"]
+            fccam["Camera"] --> fcm["MobileNetV3 (frozen)"] --> fcl["Full copy of all trainable parts<br/>trained locally"]
+            fcmic["Mic"] --> fcs["STFT"] --> fcl
+        end
+        fcl -->|"weights only"| fcsv["Server: FedAvg"]
+        fcsv -->|"global weights"| fcl
+    end
+    FB ~~~ FC

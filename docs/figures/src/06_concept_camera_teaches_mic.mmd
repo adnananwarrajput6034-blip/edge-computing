@@ -1,0 +1,14 @@
+flowchart TB
+    subgraph DAY["1. When the camera can see: the camera teaches the microphone"]
+        direction LR
+        cam["Camera frame"] --> yolo["YOLOv8<br/>(fixed teacher)"]
+        yolo -->|"label: car"| pair["Training pair<br/>(sound, car)"]
+        mic["Microphone<br/>same 500 ms"] --> pair
+        pair --> train["Train audio model<br/>(student)"]
+    end
+    subgraph NIGHT["2. When the camera fails (fog, dark): sound alone"]
+        direction LR
+        mic2["Microphone"] --> model["Trained audio model"]
+        model -->|"car"| out["Object recognised<br/>from sound alone"]
+    end
+    DAY -. "model is reused" .-> NIGHT
