@@ -65,6 +65,18 @@ def parse_args() -> argparse.Namespace:
                         "detection, so the operator standing in frame "
                         "outscores the object being enrolled — ignore "
                         "'person' and the object wins instead.")
+    p.add_argument("--only", default="",
+                   help="Comma-separated labels that may become classes, "
+                        "e.g. 'cat,dog'. Every other YOLO label is ignored, "
+                        "so look-alike guesses (cup, vase, chair) cannot "
+                        "become classes. Default: every label counts "
+                        "(the behaviour described in the thesis).")
+    p.add_argument("--min-rms", type=float, default=0.0,
+                   help="Loudness gate: keep a labelled tick only if its "
+                        "audio RMS (0..1 scale) is at least this, e.g. 0.02 "
+                        "(a quiet room is about 0.006). Stops silent moments "
+                        "from being labelled. Default 0 = off (thesis "
+                        "behaviour).")
     p.add_argument("--tick-ms", type=int, default=1000)
     p.add_argument("--duration-min", type=float, default=None,
                    help="Stop after N minutes (default: run until Ctrl-C)")
@@ -103,6 +115,8 @@ def main() -> int:
         stop_flag=stop,
         evidence_dir=evidence_dir,
         ignore=tuple(args.ignore.split(",")) if args.ignore else (),
+        only=tuple(args.only.split(",")) if args.only else (),
+        min_rms=args.min_rms,
     )
 
     if not labels:
@@ -120,6 +134,9 @@ def main() -> int:
     print(f"ticks {stats['ticks']}, labeled {stats['labeled']} "
           f"({stats['detection_rate']:.0%}), "
           f"YOLO {stats['yolo_ms_mean']} ms/frame")
+    if stats.get("quiet_skips"):
+        print(f"skipped as too quiet (--min-rms {args.min_rms}): "
+              f"{stats['quiet_skips']} ticks")
     for c, n in sorted(counts.items(), key=lambda kv: -kv[1]):
         mark = "KEPT   " if c in classes else "dropped"
         print(f"  {mark} {c:<16s} {n:4d} samples")
@@ -141,7 +158,8 @@ def main() -> int:
                         test_fraction=args.test_fraction)
 
     meta = {**stats, "classes": classes, "dropped_classes": dropped,
-            "min_samples": args.min_samples, **info}
+            "min_samples": args.min_samples, "only": args.only or None,
+            "min_rms": args.min_rms, **info}
     (out.parent / "enroll_report.json").write_text(json.dumps(meta, indent=2))
 
     if evidence_dir is not None:

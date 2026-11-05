@@ -127,3 +127,9 @@ data/pi_captures/results/
 
 # Stray wheel files
 *.whl
+
+# Live recordings copied from the Pi (input of scripts/build_dataset.py): they
+# hold your voice and camera frames, so they stay private and out of git.
+data/pi_captures/session_*/
+data/pi_captures/removed_*/
+data/pi_captures/*.build.json

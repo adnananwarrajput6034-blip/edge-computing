@@ -208,7 +208,8 @@ def predict_with_unknown(model, X: np.ndarray, classes: list[str],
 def enroll(camera_index: int, audio_device: int | None, yolo_model: str,
            confidence: float, min_samples: int, duration_min: float | None,
            tick_ms: int, stop_flag: dict, evidence_dir: Path | None = None,
-           ignore: tuple[str, ...] = ()):
+           ignore: tuple[str, ...] = (), only: tuple[str, ...] = (),
+           min_rms: float = 0.0):
     """Capture loop: YOLO names whatever is in frame, the mic supplies the
     audio, and samples accumulate under that name.
 
@@ -232,6 +233,16 @@ def enroll(camera_index: int, audio_device: int | None, yolo_model: str,
     ignore_set = {s.strip().lower() for s in ignore if s.strip()}
     if ignore_set:
         print(f"[enroll] ignoring labels: {sorted(ignore_set)}", flush=True)
+    # Added after submission (demo-improvements): an allow-list and a
+    # loudness gate. Both are off by default, so the thesis behaviour holds.
+    only_set = {s.strip().lower() for s in only if s.strip()}
+    if only_set:
+        print(f"[enroll] only these labels count: {sorted(only_set)}",
+              flush=True)
+    if min_rms > 0:
+        print(f"[enroll] loudness gate: keep a tick only if sound RMS >= "
+              f"{min_rms}", flush=True)
+    quiet_skips = 0
 
     print(f"[enroll] opening camera {camera_index}...", flush=True)
     cam = cv2.VideoCapture(camera_index)
@@ -280,13 +291,23 @@ def enroll(camera_index: int, audio_device: int | None, yolo_model: str,
         if ignore_set:
             detections = [d for d in detections
                           if d["class"].lower() not in ignore_set]
+        if only_set:
+            detections = [d for d in detections
+                          if d["class"].lower() in only_set]
         picked = vision.get_dominant_label(detections)
         label, conf = picked if picked else (None, 0.0)
         yolo_ms.append((time.perf_counter() - y0) * 1000)
+        # Loudness on the 0..1 scale (audio is int16).
+        rms = float(np.sqrt(np.mean((audio.astype(np.float32) / 32768.0) ** 2)))
 
         if label is None:
             print(f"\r[enroll] tick {ticks}: (nothing detected)"
                   f"{' ' * 30}", end="", flush=True)
+        elif rms < min_rms:
+            quiet_skips += 1
+            print(f"\r[enroll] tick {ticks}: {label} ({conf:.2f}) but too "
+                  f"quiet (rms {rms:.3f}) -> skipped{' ' * 20}",
+                  end="", flush=True)
         else:
             samples.append(audio)
             labels.append(label)
@@ -297,7 +318,8 @@ def enroll(camera_index: int, audio_device: int | None, yolo_model: str,
                 cv2.imwrite(str(evidence_dir / f"{stem}.jpg"), frame_bgr)
                 sf.write(str(evidence_dir / f"{stem}.wav"), audio, TARGET_SR)
             ready = [f"{c}:{n}" for c, n in counts.most_common()]
-            print(f"\r[enroll] tick {ticks}: {label} ({conf:.2f})  |  "
+            print(f"\r[enroll] tick {ticks}: {label} ({conf:.2f}, "
+                  f"rms {rms:.3f})  |  "
                   f"{'  '.join(ready)}{' ' * 10}", end="", flush=True)
 
         delay = tick_ms / 1000.0 - (time.perf_counter() - tick_t0)
@@ -315,6 +337,7 @@ def enroll(camera_index: int, audio_device: int | None, yolo_model: str,
         "detection_rate": round(len(labels) / max(ticks, 1), 3),
         "yolo_ms_mean": round(float(np.mean(yolo_ms)), 1) if yolo_ms else None,
         "raw_counts": dict(counts),
+        "quiet_skips": quiet_skips,
         "wall_seconds": round(time.perf_counter() - t_start, 1),
     }
     return audio_arr, labels, stats
