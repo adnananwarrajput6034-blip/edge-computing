@@ -1,0 +1,20 @@
+{
+  "node_id": "A",
+  "strategy": "A_centralized",
+  "mode": "live_vocabulary_replay",
+  "dataset": "results/live/live_dataset.npz",
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "wall_seconds": 2.3,
+  "samples_sent": 154,
+  "batches_uploaded": 6,
+  "bytes_uploaded": 1929800,
+  "label_counts": {
+    "background": 39,
+    "person": 56,
+    "cell phone": 59
+  }
+}
