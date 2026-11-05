@@ -60,5 +60,6 @@ Rebuild the dataset (the removed ticks must stay out of the session folders):
 ```
 
 Results with one Pi (154 training and 51 test clips): test accuracy A 0.941, B 0.922,
-C 0.941; sent by the Pi 1,885 / 1,577 / 1,216 KB. Live inference with model C (microphone
+C 0.941; sent by the Pi 1,930 / 1,615 / 1,245 KB (KB = 1,000 bytes, as in the thesis; the
+Pi's scripts print KiB = 1,024 bytes, so their output shows 1,885 / 1,577 / 1,216). Live inference with model C (microphone
 only, 118 ticks): background 75, cell phone 35, person 6, unknown 2.
