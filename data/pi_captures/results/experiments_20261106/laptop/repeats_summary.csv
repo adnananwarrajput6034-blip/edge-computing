@@ -1,0 +1,5 @@
+method,count,mean,std,min,max
+All data on one computer,3,0.858,0.011,0.845,0.864
+Federated (both Pis),4,0.665,0.173,0.408,0.777
+Pi 1 alone,3,0.667,0.015,0.65,0.68
+Pi 2 alone,3,0.589,0.031,0.553,0.612

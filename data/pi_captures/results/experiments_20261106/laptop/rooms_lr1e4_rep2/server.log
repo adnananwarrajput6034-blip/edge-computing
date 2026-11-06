@@ -1,0 +1,24 @@
+Server run id 1793979676-17418
+Live dataset: data/pi_captures/two_rooms_union.npz
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 5-way head)
+Live vocabulary ['background', 'bottle', 'cell phone', 'laptop', 'person'], test set (103, 51, 128, 1)
+Baseline test accuracy before any round: 0.107
+Server ready. Waiting for edge batches
+Round 1: weights from A (154 samples, 406 KB)
+Round 1: weights from B (160 samples, 406 KB)
+=== Round 1 FedAvg: test_acc=0.583, agg=0.32s, 2 clients ===
+Round 2: weights from B (160 samples, 406 KB)
+Round 2: weights from A (154 samples, 406 KB)
+=== Round 2 FedAvg: test_acc=0.728, agg=0.13s, 2 clients ===
+Round 3: weights from A (154 samples, 406 KB)
+Round 3: weights from B (160 samples, 406 KB)
+=== Round 3 FedAvg: test_acc=0.699, agg=0.13s, 2 clients ===
+Round 4: weights from B (160 samples, 406 KB)
+Round 4: weights from A (154 samples, 406 KB)
+=== Round 4 FedAvg: test_acc=0.728, agg=0.13s, 2 clients ===
+Round 5: weights from B (160 samples, 406 KB)
+Round 5: weights from A (154 samples, 406 KB)
+=== Round 5 FedAvg: test_acc=0.816, agg=0.13s, 2 clients ===
+Saved trained model -> results/experiments_20261106/rooms_lr1e4_rep2/trained.keras (5 classes: ['background', 'bottle', 'cell phone', 'laptop', 'person'])
+MQTT disconnected (rc=0)
+Server stopped. 5/5 rounds.

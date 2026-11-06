@@ -1,0 +1,11 @@
+[pi-B] shard 1/2: 77 samples
+[pi-B] building 77 local spectrograms...
+[pi-B] local set: X=(77, 51, 128, 1) (1.0s edge STFT), classes=['background', 'cell phone', 'person']
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 3-way head)
+[pi-B] waiting for global model...
+[pi-B] round 1: trained 8 epoch(s) on 77 samples in 15.4s, sent 405 KB
+[pi-B] round 2: trained 8 epoch(s) on 77 samples in 14.3s, sent 405 KB
+[pi-B] round 3: trained 8 epoch(s) on 77 samples in 16.8s, sent 405 KB
+[pi-B] server signaled done
+[pi-B] done: 3 rounds, 1216 KB uploaded, 46.4s local training -> results/live/two_pi_20261105/c_iid/pi_client_B.json
+MQTT disconnected (rc=0)

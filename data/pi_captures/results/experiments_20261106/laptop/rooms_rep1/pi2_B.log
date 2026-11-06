@@ -1,0 +1,53 @@
+[pi-B] building 160 local spectrograms...
+[pi-B] local set: X=(160, 51, 128, 1) (1.2s edge STFT), classes=['background', 'bottle', 'cell phone', 'laptop', 'person']
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 5-way head)
+[pi-B] waiting for global model...
+[pi-B] following server run 1793978083-83997
+[pi-B] round 1 epoch 1/8: loss 0.880, train accuracy 0.663
+[pi-B] round 1 epoch 2/8: loss 0.496, train accuracy 0.850
+[pi-B] round 1 epoch 3/8: loss 0.522, train accuracy 0.819
+[pi-B] round 1 epoch 4/8: loss 0.385, train accuracy 0.875
+[pi-B] round 1 epoch 5/8: loss 0.281, train accuracy 0.900
+[pi-B] round 1 epoch 6/8: loss 0.273, train accuracy 0.919
+[pi-B] round 1 epoch 7/8: loss 0.262, train accuracy 0.919
+[pi-B] round 1 epoch 8/8: loss 0.232, train accuracy 0.913
+[pi-B] round 1: trained 8 epoch(s) on 160 samples in 27.0s, sent 406 KB
+[pi-B] round 2 epoch 1/8: loss 0.413, train accuracy 0.856
+[pi-B] round 2 epoch 2/8: loss 0.281, train accuracy 0.919
+[pi-B] round 2 epoch 3/8: loss 0.280, train accuracy 0.919
+[pi-B] round 2 epoch 4/8: loss 0.286, train accuracy 0.894
+[pi-B] round 2 epoch 5/8: loss 0.217, train accuracy 0.925
+[pi-B] round 2 epoch 6/8: loss 0.252, train accuracy 0.906
+[pi-B] round 2 epoch 7/8: loss 0.182, train accuracy 0.950
+[pi-B] round 2 epoch 8/8: loss 0.248, train accuracy 0.925
+[pi-B] round 2: trained 8 epoch(s) on 160 samples in 29.0s, sent 406 KB
+[pi-B] round 3 epoch 1/8: loss 0.350, train accuracy 0.881
+[pi-B] round 3 epoch 2/8: loss 0.329, train accuracy 0.900
+[pi-B] round 3 epoch 3/8: loss 0.291, train accuracy 0.913
+[pi-B] round 3 epoch 4/8: loss 0.230, train accuracy 0.925
+[pi-B] round 3 epoch 5/8: loss 0.179, train accuracy 0.931
+[pi-B] round 3 epoch 6/8: loss 0.164, train accuracy 0.944
+[pi-B] round 3 epoch 7/8: loss 0.165, train accuracy 0.944
+[pi-B] round 3 epoch 8/8: loss 0.193, train accuracy 0.925
+[pi-B] round 3: trained 8 epoch(s) on 160 samples in 29.4s, sent 406 KB
+[pi-B] round 4 epoch 1/8: loss 0.263, train accuracy 0.919
+[pi-B] round 4 epoch 2/8: loss 0.289, train accuracy 0.925
+[pi-B] round 4 epoch 3/8: loss 0.172, train accuracy 0.938
+[pi-B] round 4 epoch 4/8: loss 0.214, train accuracy 0.931
+[pi-B] round 4 epoch 5/8: loss 0.204, train accuracy 0.931
+[pi-B] round 4 epoch 6/8: loss 0.198, train accuracy 0.931
+[pi-B] round 4 epoch 7/8: loss 0.174, train accuracy 0.931
+[pi-B] round 4 epoch 8/8: loss 0.156, train accuracy 0.925
+[pi-B] round 4: trained 8 epoch(s) on 160 samples in 33.0s, sent 406 KB
+[pi-B] round 5 epoch 1/8: loss 0.258, train accuracy 0.913
+[pi-B] round 5 epoch 2/8: loss 0.152, train accuracy 0.962
+[pi-B] round 5 epoch 3/8: loss 0.117, train accuracy 0.950
+[pi-B] round 5 epoch 4/8: loss 0.127, train accuracy 0.969
+[pi-B] round 5 epoch 5/8: loss 0.096, train accuracy 0.975
+[pi-B] round 5 epoch 6/8: loss 0.223, train accuracy 0.913
+[pi-B] round 5 epoch 7/8: loss 0.135, train accuracy 0.956
+[pi-B] round 5 epoch 8/8: loss 0.101, train accuracy 0.962
+[pi-B] round 5: trained 8 epoch(s) on 160 samples in 29.0s, sent 406 KB
+[pi-B] server signaled done
+[pi-B] done: 5 rounds, 2032 KB uploaded, 147.4s local training -> results/live/experiments_20261106/rooms_rep1/pi_client_B.json
+MQTT disconnected (rc=0)

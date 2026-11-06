@@ -1,0 +1,58 @@
+{
+  "strategy": "hybrid",
+  "num_rounds_target": 5,
+  "train_trigger_samples": 30,
+  "epochs_per_round": 10,
+  "warm_started": true,
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "buffer_samples": 30,
+      "test_accuracy": 0.5882353186607361,
+      "train_time_seconds": 2.07,
+      "broadcast_bytes": 414852
+    },
+    {
+      "round": 2,
+      "buffer_samples": 60,
+      "test_accuracy": 0.29411765933036804,
+      "train_time_seconds": 2.39,
+      "broadcast_bytes": 414913
+    },
+    {
+      "round": 3,
+      "buffer_samples": 90,
+      "test_accuracy": 0.6274510025978088,
+      "train_time_seconds": 2.85,
+      "broadcast_bytes": 414753
+    },
+    {
+      "round": 4,
+      "buffer_samples": 120,
+      "test_accuracy": 0.8823529481887817,
+      "train_time_seconds": 3.82,
+      "broadcast_bytes": 414864
+    },
+    {
+      "round": 5,
+      "buffer_samples": 150,
+      "test_accuracy": 0.9215686321258545,
+      "train_time_seconds": 5.08,
+      "broadcast_bytes": 414901
+    }
+  ],
+  "samples_received_total": 154,
+  "skipped_unknown_labels": 0,
+  "per_client_samples": {
+    "A": 154
+  },
+  "per_client_bytes_total": {
+    "A": 1614678
+  },
+  "bytes_broadcast_total": 2074283
+}

@@ -1,0 +1,41 @@
+{
+  "strategy": "federated",
+  "num_rounds_target": 3,
+  "epochs_per_round": 8,
+  "warm_started": true,
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "buffer_samples": 154,
+      "test_accuracy": 0.9803921580314636,
+      "train_time_seconds": 0.2,
+      "n_clients": 1
+    },
+    {
+      "round": 2,
+      "buffer_samples": 154,
+      "test_accuracy": 0.8823529481887817,
+      "train_time_seconds": 0.09,
+      "n_clients": 1
+    },
+    {
+      "round": 3,
+      "buffer_samples": 154,
+      "test_accuracy": 0.9411764740943909,
+      "train_time_seconds": 0.27,
+      "n_clients": 1
+    }
+  ],
+  "per_client_samples": {
+    "A": 154
+  },
+  "per_client_bytes_total": {
+    "A": 1245348
+  },
+  "bytes_broadcast_total": 2075582
+}

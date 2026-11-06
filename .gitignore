@@ -123,7 +123,23 @@ data/vggsound/
 data/pi_captures/images/
 data/pi_captures/audio/
 data/pi_captures/evidence/
-data/pi_captures/results/
+data/pi_captures/results/*
+# ...except the post-submission live experiment of 5 Nov 2026, kept public on
+# purpose so the recordings, photos and results can be inspected
+!data/pi_captures/results/live_nov5/
+!data/pi_captures/results/two_pi_20261105/
+!data/pi_captures/session_*/*.wav
+!data/pi_captures/removed_*/*.wav
+# the human labels (relabel.csv) are evidence of who named which clip
+!data/pi_captures/session_*/relabel.csv
+# experiment day, 6 Nov 2026: run results (incl. TensorBoard event files, pandas
+# tables and charts) and the live teaching sessions (named clips, photos, eye memory)
+!data/pi_captures/results/experiments_20261106/
+!data/pi_captures/results/experiments_20261106/**/*.csv
+!data/pi_captures/results/experiments_20261106/**/*.png
+!data/pi_captures/results/experiments_20261106/**/events.out.tfevents.*
+!data/pi_captures/teach_*/**/*.wav
+!data/pi_captures/teach_*/**/*.npz
 
 # Stray wheel files
 *.whl

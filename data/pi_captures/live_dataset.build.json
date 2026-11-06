@@ -1,0 +1,48 @@
+{
+  "sessions": [
+    "data/pi_captures/session_20261105_002237",
+    "data/pi_captures/session_20261105_004018",
+    "data/pi_captures/session_20261105_015624"
+  ],
+  "rules": {
+    "sessions": [
+      "data/pi_captures/session_20261105_002237",
+      "data/pi_captures/session_20261105_004018",
+      "data/pi_captures/session_20261105_015624"
+    ],
+    "summary": false,
+    "classes": "cell phone,person",
+    "min_conf": 0.5,
+    "min_rms": "auto",
+    "min_samples": 20,
+    "background": true,
+    "background_max_rms": "auto",
+    "test_fraction": 0.25,
+    "out": "data/pi_captures/live_dataset.npz"
+  },
+  "sound_thresholds": {
+    "data/pi_captures/session_20261105_002237": 0.0113,
+    "data/pi_captures/session_20261105_004018": 0.013,
+    "data/pi_captures/session_20261105_015624": 0.011
+  },
+  "reasons": {
+    "no chosen class visible": 46,
+    "background": 52,
+    "labelled by YOLO": 153,
+    "too quiet": 89,
+    "unclear (half-visible)": 6
+  },
+  "path": "data/pi_captures/live_dataset.npz",
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "n_train": 154,
+  "n_test": 51,
+  "per_class": {
+    "background": 52,
+    "cell phone": 79,
+    "person": 74
+  }
+}

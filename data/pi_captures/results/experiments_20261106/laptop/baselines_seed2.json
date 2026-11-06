@@ -1,0 +1,49 @@
+{
+  "classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person"
+  ],
+  "test_clips": 103,
+  "majority_baseline": 0.32038834951456313,
+  "epochs": 40,
+  "seed": 2,
+  "room1_only": {
+    "overall": 0.6504854368932039,
+    "room1": 0.9215686274509803,
+    "room2": 0.38461538461538464,
+    "per_class": {
+      "background": 1.0,
+      "bottle": 0.0,
+      "cell phone": 0.9,
+      "laptop": 0.0,
+      "person": 0.8888888888888888
+    }
+  },
+  "room2_only": {
+    "overall": 0.5533980582524272,
+    "room1": 0.2549019607843137,
+    "room2": 0.8461538461538461,
+    "per_class": {
+      "background": 1.0,
+      "bottle": 0.75,
+      "cell phone": 0.0,
+      "laptop": 0.75,
+      "person": 0.0
+    }
+  },
+  "centralized_both_rooms": {
+    "overall": 0.8640776699029126,
+    "room1": 0.8431372549019608,
+    "room2": 0.8846153846153846,
+    "per_class": {
+      "background": 0.9696969696969697,
+      "bottle": 0.75,
+      "cell phone": 0.7,
+      "laptop": 1.0,
+      "person": 0.8888888888888888
+    }
+  }
+}

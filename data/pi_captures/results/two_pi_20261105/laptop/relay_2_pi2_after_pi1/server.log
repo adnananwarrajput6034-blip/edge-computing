@@ -1,0 +1,22 @@
+Server run id 1793974867-71288
+Live dataset: data/pi_captures/two_rooms_union.npz
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 5-way head)
+/Users/adnananwarrajput/Desktop/edgeComputing/.venv/lib/python3.11/site-packages/keras/src/saving/saving_lib.py:798: UserWarning: Skipping variable loading for optimizer 'adam', because it has 34 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Starting from results/two_pi_20261105/relay_1_pi1_alone/trained.keras (relay training)
+Live vocabulary ['background', 'bottle', 'cell phone', 'laptop', 'person'], test set (103, 51, 128, 1)
+Baseline test accuracy before any round: 0.680
+Server ready. Waiting for edge batches
+Round 1: weights from B (160 samples, 406 KB)
+=== Round 1 FedAvg: test_acc=0.456, agg=0.26s, 1 clients ===
+Round 2: weights from B (160 samples, 406 KB)
+=== Round 2 FedAvg: test_acc=0.583, agg=0.30s, 1 clients ===
+Round 3: weights from B (160 samples, 406 KB)
+=== Round 3 FedAvg: test_acc=0.602, agg=0.27s, 1 clients ===
+Round 4: weights from B (160 samples, 406 KB)
+=== Round 4 FedAvg: test_acc=0.388, agg=0.31s, 1 clients ===
+Round 5: weights from B (160 samples, 406 KB)
+=== Round 5 FedAvg: test_acc=0.621, agg=0.15s, 1 clients ===
+Saved trained model -> results/two_pi_20261105/relay_2_pi2_after_pi1/trained.keras (5 classes: ['background', 'bottle', 'cell phone', 'laptop', 'person'])
+MQTT disconnected (rc=0)
+Server stopped. 5/5 rounds.

@@ -1,0 +1,90 @@
+{"who": "client_A", "kind": "train", "step": 1, "accuracy": 0.6298701167106628, "loss": 1.0339763164520264, "time": 1793978975.285366, "round": 1, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 1, "accuracy": 0.668749988079071, "loss": 0.8168269991874695, "time": 1793978975.28663, "round": 1, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 2, "accuracy": 0.8311688303947449, "loss": 0.49621692299842834, "time": 1793978978.037598, "round": 1, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 2, "accuracy": 0.8687499761581421, "loss": 0.4128001630306244, "time": 1793978978.346849, "round": 1, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 3, "accuracy": 0.850649356842041, "loss": 0.35984376072883606, "time": 1793978980.971151, "round": 1, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 3, "accuracy": 0.862500011920929, "loss": 0.3691733181476593, "time": 1793978981.443307, "round": 1, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 4, "accuracy": 0.850649356842041, "loss": 0.4455322027206421, "time": 1793978983.877965, "round": 1, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 4, "accuracy": 0.887499988079071, "loss": 0.32671022415161133, "time": 1793978984.536271, "round": 1, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 4, "accuracy": 0.5339806079864502, "loss": 1.3733032941818237, "time": 1793978984.8254561, "round": 1}
+{"who": "client_A", "kind": "train", "step": 5, "accuracy": 0.798701286315918, "loss": 0.5898447036743164, "time": 1793978990.173492, "round": 2, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 5, "accuracy": 0.7875000238418579, "loss": 0.577816903591156, "time": 1793978990.2152681, "round": 2, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 6, "accuracy": 0.9025974273681641, "loss": 0.26149269938468933, "time": 1793978993.089462, "round": 2, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 6, "accuracy": 0.8500000238418579, "loss": 0.38325971364974976, "time": 1793978993.3127959, "round": 2, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 7, "accuracy": 0.856249988079071, "loss": 0.3618321716785431, "time": 1793978996.682795, "round": 2, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 7, "accuracy": 0.9220778942108154, "loss": 0.21897363662719727, "time": 1793978998.194131, "round": 2, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 8, "accuracy": 0.8812500238418579, "loss": 0.3438725471496582, "time": 1793978999.512683, "round": 2, "epoch": 4}
+{"who": "client_A", "kind": "train", "step": 8, "accuracy": 0.9415584206581116, "loss": 0.2093278020620346, "time": 1793979001.1214101, "round": 2, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 8, "accuracy": 0.6699029207229614, "loss": 0.9818761944770813, "time": 1793979001.414026, "round": 2}
+{"who": "client_A", "kind": "train", "step": 9, "accuracy": 0.8961039185523987, "loss": 0.32706862688064575, "time": 1793979007.080718, "round": 3, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 9, "accuracy": 0.8187500238418579, "loss": 0.532394528388977, "time": 1793979007.170923, "round": 3, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 10, "accuracy": 0.9350649118423462, "loss": 0.1876736581325531, "time": 1793979009.992933, "round": 3, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 10, "accuracy": 0.887499988079071, "loss": 0.28874510526657104, "time": 1793979010.2719429, "round": 3, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 11, "accuracy": 0.9415584206581116, "loss": 0.18385908007621765, "time": 1793979012.906234, "round": 3, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 11, "accuracy": 0.862500011920929, "loss": 0.3903518319129944, "time": 1793979013.3575768, "round": 3, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 12, "accuracy": 0.948051929473877, "loss": 0.14369070529937744, "time": 1793979015.8895192, "round": 3, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 12, "accuracy": 0.90625, "loss": 0.23568396270275116, "time": 1793979016.456498, "round": 3, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 12, "accuracy": 0.6504854559898376, "loss": 0.7847930192947388, "time": 1793979018.7913458, "round": 3}
+{"who": "client_B", "kind": "train", "step": 13, "accuracy": 0.856249988079071, "loss": 0.39899903535842896, "time": 1793979024.137763, "round": 4, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 13, "accuracy": 0.8896104097366333, "loss": 0.3558974862098694, "time": 1793979024.1474628, "round": 4, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 14, "accuracy": 0.9545454382896423, "loss": 0.2015891969203949, "time": 1793979027.0864809, "round": 4, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 14, "accuracy": 0.8999999761581421, "loss": 0.3539521396160126, "time": 1793979027.2228632, "round": 4, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 15, "accuracy": 0.9415584206581116, "loss": 0.1910230964422226, "time": 1793979030.017688, "round": 4, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 15, "accuracy": 0.8999999761581421, "loss": 0.2793463468551636, "time": 1793979032.333728, "round": 4, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 16, "accuracy": 0.9610389471054077, "loss": 0.13608568906784058, "time": 1793979032.922157, "round": 4, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 16, "accuracy": 0.9312499761581421, "loss": 0.2338261604309082, "time": 1793979035.439755, "round": 4, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 16, "accuracy": 0.7184466123580933, "loss": 0.7448088526725769, "time": 1793979035.647208, "round": 4}
+{"who": "client_B", "kind": "train", "step": 17, "accuracy": 0.8812500238418579, "loss": 0.32036006450653076, "time": 1793979041.008364, "round": 5, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 17, "accuracy": 0.9090909361839294, "loss": 0.28662440180778503, "time": 1793979041.035337, "round": 5, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 18, "accuracy": 0.9125000238418579, "loss": 0.2824455499649048, "time": 1793979046.198626, "round": 5, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 18, "accuracy": 0.948051929473877, "loss": 0.14985857903957367, "time": 1793979046.200657, "round": 5, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 19, "accuracy": 0.9675324559211731, "loss": 0.11792837083339691, "time": 1793979049.0656471, "round": 5, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 19, "accuracy": 0.9312499761581421, "loss": 0.1984706073999405, "time": 1793979049.18781, "round": 5, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 20, "accuracy": 0.9545454382896423, "loss": 0.19015279412269592, "time": 1793979051.993739, "round": 5, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 20, "accuracy": 0.925000011920929, "loss": 0.21534626185894012, "time": 1793979052.293937, "round": 5, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 20, "accuracy": 0.8058252334594727, "loss": 0.6674264669418335, "time": 1793979052.493153, "round": 5}
+{"who": "client_A", "kind": "train", "step": 21, "accuracy": 0.9025974273681641, "loss": 0.2814619839191437, "time": 1793979057.871715, "round": 6, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 21, "accuracy": 0.862500011920929, "loss": 0.3783380389213562, "time": 1793979057.956723, "round": 6, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 22, "accuracy": 0.9375, "loss": 0.2013389617204666, "time": 1793979061.0333261, "round": 6, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 22, "accuracy": 0.9545454382896423, "loss": 0.13799692690372467, "time": 1793979062.9133382, "round": 6, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 23, "accuracy": 0.9125000238418579, "loss": 0.24840418994426727, "time": 1793979064.1201248, "round": 6, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 23, "accuracy": 0.9545454382896423, "loss": 0.13862508535385132, "time": 1793979065.860456, "round": 6, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 24, "accuracy": 0.9375, "loss": 0.18464705348014832, "time": 1793979067.226645, "round": 6, "epoch": 4}
+{"who": "client_A", "kind": "train", "step": 24, "accuracy": 0.9740259647369385, "loss": 0.08341798186302185, "time": 1793979068.79372, "round": 6, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 24, "accuracy": 0.7281553149223328, "loss": 0.7710140943527222, "time": 1793979068.991346, "round": 6}
+{"who": "client_A", "kind": "train", "step": 25, "accuracy": 0.8896104097366333, "loss": 0.26010578870773315, "time": 1793979074.323165, "round": 7, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 25, "accuracy": 0.893750011920929, "loss": 0.35646843910217285, "time": 1793979074.384059, "round": 7, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 26, "accuracy": 0.9155844449996948, "loss": 0.16670626401901245, "time": 1793979077.273217, "round": 7, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 26, "accuracy": 0.9437500238418579, "loss": 0.1832106113433838, "time": 1793979077.48228, "round": 7, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 27, "accuracy": 0.9545454382896423, "loss": 0.11266018450260162, "time": 1793979080.1957572, "round": 7, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 27, "accuracy": 0.90625, "loss": 0.2729606628417969, "time": 1793979080.601224, "round": 7, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 28, "accuracy": 0.948051929473877, "loss": 0.12466710805892944, "time": 1793979083.164672, "round": 7, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 28, "accuracy": 0.949999988079071, "loss": 0.162012979388237, "time": 1793979083.674839, "round": 7, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 28, "accuracy": 0.7864077687263489, "loss": 0.687554121017456, "time": 1793979083.882057, "round": 7}
+{"who": "client_A", "kind": "train", "step": 29, "accuracy": 0.9415584206581116, "loss": 0.20663799345493317, "time": 1793979089.2160718, "round": 8, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 29, "accuracy": 0.887499988079071, "loss": 0.31198954582214355, "time": 1793979089.283948, "round": 8, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 30, "accuracy": 0.9675324559211731, "loss": 0.0840521901845932, "time": 1793979092.139925, "round": 8, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 30, "accuracy": 0.949999988079071, "loss": 0.1803307682275772, "time": 1793979092.3840861, "round": 8, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 31, "accuracy": 0.9415584206581116, "loss": 0.15254521369934082, "time": 1793979095.145516, "round": 8, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 31, "accuracy": 0.8687499761581421, "loss": 0.30672475695610046, "time": 1793979095.482111, "round": 8, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 32, "accuracy": 0.9610389471054077, "loss": 0.14108461141586304, "time": 1793979098.011446, "round": 8, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 32, "accuracy": 0.949999988079071, "loss": 0.1791248619556427, "time": 1793979098.629327, "round": 8, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 32, "accuracy": 0.6213592290878296, "loss": 1.112605094909668, "time": 1793979098.822817, "round": 8}
+{"who": "client_A", "kind": "train", "step": 33, "accuracy": 0.9415584206581116, "loss": 0.19378209114074707, "time": 1793979104.2604952, "round": 9, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 33, "accuracy": 0.9125000238418579, "loss": 0.23710143566131592, "time": 1793979104.262825, "round": 9, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 34, "accuracy": 0.949999988079071, "loss": 0.14506176114082336, "time": 1793979107.357766, "round": 9, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 34, "accuracy": 0.9350649118423462, "loss": 0.13519297540187836, "time": 1793979109.379454, "round": 9, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 35, "accuracy": 0.925000011920929, "loss": 0.1666886955499649, "time": 1793979110.449209, "round": 9, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 35, "accuracy": 0.9415584206581116, "loss": 0.16828133165836334, "time": 1793979112.2450628, "round": 9, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 36, "accuracy": 0.9675324559211731, "loss": 0.11187003552913666, "time": 1793979115.136218, "round": 9, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 36, "accuracy": 0.9375, "loss": 0.14656613767147064, "time": 1793979115.5819871, "round": 9, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 36, "accuracy": 0.6893203854560852, "loss": 1.1771049499511719, "time": 1793979115.905321, "round": 9}
+{"who": "client_A", "kind": "train", "step": 37, "accuracy": 0.9675324559211731, "loss": 0.14572539925575256, "time": 1793979121.727794, "round": 10, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 37, "accuracy": 0.8999999761581421, "loss": 0.2915180027484894, "time": 1793979121.9341362, "round": 10, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 38, "accuracy": 0.9610389471054077, "loss": 0.11418381333351135, "time": 1793979124.7406569, "round": 10, "epoch": 2}
+{"who": "client_B", "kind": "train", "step": 38, "accuracy": 0.925000011920929, "loss": 0.2149004489183426, "time": 1793979127.0249422, "round": 10, "epoch": 2}
+{"who": "client_A", "kind": "train", "step": 39, "accuracy": 1.0, "loss": 0.02533438242971897, "time": 1793979129.76284, "round": 10, "epoch": 3}
+{"who": "client_B", "kind": "train", "step": 39, "accuracy": 0.9375, "loss": 0.1398097574710846, "time": 1793979130.135715, "round": 10, "epoch": 3}
+{"who": "client_A", "kind": "train", "step": 40, "accuracy": 0.9675324559211731, "loss": 0.09447744488716125, "time": 1793979133.338971, "round": 10, "epoch": 4}
+{"who": "client_B", "kind": "train", "step": 40, "accuracy": 0.9312499761581421, "loss": 0.17536191642284393, "time": 1793979135.268836, "round": 10, "epoch": 4}
+{"who": "server_test", "kind": "test", "step": 40, "accuracy": 0.6213592290878296, "loss": 1.3708946704864502, "time": 1793979135.455152, "round": 10}

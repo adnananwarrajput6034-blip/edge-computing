@@ -74,10 +74,42 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--shard", default=None,
                    help="'i/n' — train on only this node's slice, so two Pis "
                         "hold disjoint data (the non-IID story)")
+    p.add_argument("--class-order", default=None,
+                   help="NEGATIVE CONTROL ONLY: comma-separated class names "
+                        "in a different order than the dataset, e.g. "
+                        "'background,person,cell phone'. This Pi then numbers "
+                        "its labels its own way, as two independently built "
+                        "datasets would. FedAvg averages outputs by position, "
+                        "so the classes get mixed up; the server's class "
+                        "check refuses such updates unless --no-class-check.")
     p.add_argument("--timeout", type=float, default=180.0,
                    help="Give up if no global model arrives in N seconds")
     p.add_argument("--run-dir", default="results/live/strategy_c")
     return p.parse_args()
+
+
+class EpochReporter(tf.keras.callbacks.Callback):
+    """After every local epoch: print one line and publish a small progress
+    message on thesis/edge/<id>/metrics, so the server can draw live
+    training curves (TensorBoard) while the Pi is still training. QoS 0:
+    a lost progress message only loses one point on the graph."""
+
+    def __init__(self, mqtt_client, node_id, run_id, rnd, epochs):
+        super().__init__()
+        self.mqtt, self.node_id, self.run_id = mqtt_client, node_id, run_id
+        self.rnd, self.epochs = rnd, epochs
+
+    def on_epoch_end(self, epoch, logs=None):
+        logs = logs or {}
+        msg = {"node_id": self.node_id, "run_id": self.run_id, "round": self.rnd,
+               "epoch": epoch + 1, "epochs": self.epochs,
+               "loss": float(logs.get("loss", float("nan"))),
+               "accuracy": float(logs.get("accuracy", float("nan"))),
+               "time": time.time()}
+        print(f"[pi-{self.node_id}] round {self.rnd} epoch {epoch + 1}/"
+              f"{self.epochs}: loss {msg['loss']:.3f}, train accuracy "
+              f"{msg['accuracy']:.3f}", flush=True)
+        self.mqtt.publish(f"thesis/edge/{self.node_id}/metrics", msg, qos=0)
 
 
 def serialize_weights(weights: list, meta: dict) -> bytes:
@@ -107,6 +139,18 @@ def main() -> int:
         audio, y = audio[i::n], y[i::n]
         print(f"[pi-{args.node_id}] shard {args.shard}: {len(audio)} samples",
               flush=True)
+
+    if args.class_order:
+        order = [c.strip() for c in args.class_order.split(",")]
+        if sorted(order) != sorted(classes):
+            print(f"ERROR: --class-order {order} must contain exactly the "
+                  f"dataset classes {classes}", file=sys.stderr)
+            return 1
+        # Same clips, same names; only the numbering changes.
+        y = np.array([order.index(classes[int(v)]) for v in y], dtype=np.int32)
+        print(f"[pi-{args.node_id}] NEGATIVE CONTROL: own class order {order} "
+              f"(dataset order {classes})", flush=True)
+        classes = order
 
     # STFT on the edge — same parameters as B and the servers, so the
     # feature space matches across every strategy.
@@ -141,6 +185,8 @@ def main() -> int:
     round_times: list[dict] = []
     t_start = time.perf_counter()
 
+    server_run = None   # run id of the server this client follows
+    last_round = 0      # highest round already trained
     print(f"[pi-{args.node_id}] waiting for global model...", flush=True)
     while not stop["flag"]:
         try:
@@ -153,11 +199,28 @@ def main() -> int:
             continue
 
         global_weights, meta = deserialize_weights(payload)
+        # Follow one server run only: a stale server on the same broker
+        # would otherwise mix its global models into this run.
+        if server_run is None:
+            server_run = meta.get("run_id")
+            print(f"[pi-{args.node_id}] following server run {server_run}",
+                  flush=True)
+        elif meta.get("run_id") != server_run:
+            print(f"[pi-{args.node_id}] WARNING: ignoring a global model from "
+                  f"another server run ({meta.get('run_id')}, following "
+                  f"{server_run})", flush=True)
+            continue
         if meta.get("done"):
             print(f"[pi-{args.node_id}] server signaled done", flush=True)
             break
 
         rnd = meta["round"]
+        if rnd <= last_round:
+            # A retained message can arrive again after a reconnect.
+            print(f"[pi-{args.node_id}] round {rnd} already trained; "
+                  f"ignoring the repeated global model", flush=True)
+            continue
+        last_round = rnd
         model.set_weights(global_weights)
         # Fresh optimizer each round: FedAvg does not carry optimizer state
         # across rounds, and reusing Adam's momentum after set_weights()
@@ -168,12 +231,17 @@ def main() -> int:
                       metrics=["accuracy"])
 
         t0 = time.perf_counter()
+        reporter = EpochReporter(mqtt_client, args.node_id, server_run, rnd,
+                                 meta["local_epochs"])
         model.fit(X_local, y_local, epochs=meta["local_epochs"],
-                  batch_size=args.batch_size, verbose=0)
+                  batch_size=args.batch_size, verbose=0, callbacks=[reporter])
         train_time = time.perf_counter() - t0
 
         payload_out = serialize_weights(model.get_weights(), {
-            "node_id": args.node_id, "round": rnd, "n_samples": len(y_local)})
+            "node_id": args.node_id, "round": rnd, "n_samples": len(y_local),
+            # The label map travels with the weights, so the server can
+            # refuse an update whose output positions mean other classes.
+            "classes": list(classes)})
         if not mqtt_client.publish(weights_topic, payload_out, qos=1):
             print(f"[pi-{args.node_id}] publish failed round {rnd}",
                   file=sys.stderr)

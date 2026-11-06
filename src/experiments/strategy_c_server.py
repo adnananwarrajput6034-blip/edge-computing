@@ -33,6 +33,7 @@ import io
 import json
 import os
 import queue
+import threading
 import signal
 import sys
 import time
@@ -89,6 +90,16 @@ def parse_args() -> argparse.Namespace:
                         "UrbanSound8K vocabulary and test set with the "
                         "classes captured live, and resizes the global model "
                         "head to match the Pi clients.")
+    p.add_argument("--init-model", default=None,
+                   help="Start the global model from this saved .keras "
+                        "(with --live-dataset) instead of the UrbanSound8K "
+                        "warm start. Used for relay training: run Pi 1 alone, "
+                        "then Pi 2 alone starting from Pi 1's result.")
+    p.add_argument("--no-class-check", action="store_true",
+                   help="NEGATIVE CONTROL ONLY: accept client weights even "
+                        "when the client's class order differs from the "
+                        "server's. FedAvg averages outputs by position, so "
+                        "this silently mixes classes.")
     return p.parse_args()
 
 
@@ -111,6 +122,11 @@ def deserialize_weights(raw: bytes):
 class StrategyCServer:
     def __init__(self, args: argparse.Namespace):
         self.args = args
+        # Tags every global model, so a client can tell this run apart from a
+        # stale server still connected to the same broker (5 Nov 2026: a
+        # leftover server mixed its models into a new run).
+        self.run_id = f"{int(time.time())}-{os.getpid()}"
+        print(f"Server run id {self.run_id}", flush=True)
         self.run_dir = Path(args.run_dir)
         self.run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -130,6 +146,19 @@ class StrategyCServer:
                 ds["audio_test"])[..., np.newaxis].astype(np.float32)
             self.y_test = ds["y_test"]
             self.model, self.warm_started = build_live_model(len(self.classes))
+            if args.init_model:
+                # Relay (sequential) training: continue from the model an
+                # earlier run ended with, e.g. Pi 1 alone, then Pi 2 alone.
+                sidecar = Path(args.init_model).with_suffix(".classes.json")
+                if sidecar.exists():
+                    prev = json.loads(sidecar.read_text())["classes"]
+                    if list(prev) != list(self.classes):
+                        raise SystemExit(f"--init-model classes {prev} differ "
+                                         f"from the dataset's {self.classes}")
+                prev_model = tf.keras.models.load_model(args.init_model)
+                self.model.set_weights(prev_model.get_weights())
+                print(f"Starting from {args.init_model} (relay training)",
+                      flush=True)
             print(f"Live vocabulary {self.classes}, "
                   f"test set {self.X_test.shape}", flush=True)
         else:
@@ -165,12 +194,51 @@ class StrategyCServer:
 
         self.mqtt = MQTTClient(broker=args.broker, port=args.port, node_id="server")
 
+        # Live graphs: TensorBoard event files plus one JSON line per point
+        # (epochs.jsonl, easy to load with pandas). Open them with
+        #   .venv/bin/tensorboard --logdir <run-dir or its parent>
+        self.tb_dir = self.run_dir / "tensorboard"
+        self.tb_writers: dict = {}
+        self.tb_lock = threading.Lock()
+        self.points = open(self.run_dir / "epochs.jsonl", "a", buffering=1)
+
+    def _tb(self, name: str):
+        if name not in self.tb_writers:
+            self.tb_writers[name] = tf.summary.create_file_writer(str(self.tb_dir / name))
+        return self.tb_writers[name]
+
+    def log_point(self, who: str, step: int, accuracy: float, loss: float,
+                  kind: str, extra: dict) -> None:
+        """One point on the live graph. step = epochs trained so far by a
+        client, so client curves and the server's test curve share an x-axis."""
+        with self.tb_lock:
+            w = self._tb(who)
+            with w.as_default():
+                tf.summary.scalar("accuracy", accuracy, step=step)
+                tf.summary.scalar("loss", loss, step=step)
+            w.flush()
+            self.points.write(json.dumps({"who": who, "kind": kind, "step": step,
+                                          "accuracy": accuracy, "loss": loss,
+                                          "time": time.time(), **extra}) + "\n")
+
+    def _on_metrics(self, topic: str, payload: bytes) -> None:
+        try:
+            m = json.loads(payload)
+        except ValueError:
+            return
+        if m.get("run_id") != self.run_id:
+            return  # progress from another server run
+        step = (m["round"] - 1) * m["epochs"] + m["epoch"]
+        self.log_point(f"client_{m['node_id']}", step, m["accuracy"], m["loss"],
+                       "train", {"round": m["round"], "epoch": m["epoch"]})
+
     def _on_weights(self, topic: str, payload: bytes) -> None:
         self.inbox.put((topic, payload))
 
     def connect(self) -> bool:
         if not self.mqtt.connect():
             return False
+        self.mqtt.subscribe("thesis/edge/+/metrics", self._on_metrics, qos=0)
         return self.mqtt.subscribe(WEIGHTS_TOPIC, self._on_weights, qos=1)
 
     def broadcast_global(self, round_no: int, done: bool) -> None:
@@ -179,6 +247,7 @@ class StrategyCServer:
             "local_epochs": self.args.epochs_per_round,
             "local_lr": self.args.local_lr,
             "done": done,
+            "run_id": self.run_id,
         })
         self.mqtt.publish(GLOBAL_TOPIC, payload, qos=1, retain=True)
         self.bytes_broadcast_total += len(payload)
@@ -188,6 +257,25 @@ class StrategyCServer:
         weights, meta = deserialize_weights(payload)
         if meta.get("round") != self.current_round:
             return  # stale weights from a prior round — ignore
+        client_classes = meta.get("classes")
+        if client_classes is None:
+            warned = self.__dict__.setdefault("_no_class_warned", set())
+            if node_id not in warned:  # replay clients send no class list
+                warned.add(node_id)
+                print(f"Round {self.current_round}: note: {node_id} sends no "
+                      f"class list (older or replay client); its label map "
+                      f"is not checked", flush=True)
+        elif list(client_classes) != list(self.classes):
+            if not self.args.no_class_check:
+                print(f"Round {self.current_round}: REFUSED weights from "
+                      f"{node_id}: its classes {client_classes} do not match "
+                      f"the server's {list(self.classes)}. Averaging them "
+                      f"would mix classes; fix the client's class list.",
+                      flush=True)
+                return
+            print(f"Round {self.current_round}: --no-class-check: accepting "
+                  f"{node_id} with classes {client_classes} (server "
+                  f"{list(self.classes)})", flush=True)
         self.per_client_bytes[node_id] = (
             self.per_client_bytes.get(node_id, 0) + len(payload))
         self.per_client_samples[node_id] = meta["n_samples"]
@@ -202,8 +290,11 @@ class StrategyCServer:
         t0 = time.perf_counter()
         new_global = self.aggregator.aggregate(client_weights, sample_counts)
         self.model.set_weights(new_global)
-        _, test_acc = self.model.evaluate(self.X_test, self.y_test, verbose=0)
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test, verbose=0)
         agg_time = time.perf_counter() - t0
+        self.log_point("server_test", self.current_round * self.args.epochs_per_round,
+                       float(test_acc), float(test_loss), "test",
+                       {"round": self.current_round})
 
         self.rounds.append({
             "round": self.current_round,

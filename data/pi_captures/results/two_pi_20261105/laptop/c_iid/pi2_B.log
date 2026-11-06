@@ -1,0 +1,15 @@
+[pi-B] shard 1/2: 77 samples
+[pi-B] building 77 local spectrograms...
+[pi-B] local set: X=(77, 51, 128, 1) (18.2s edge STFT), classes=['background', 'cell phone', 'person']
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/adi6034/thesis/edge/edgeComputing/src/experiments/strategy_c_pi_client.py", line 241, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/adi6034/thesis/edge/edgeComputing/src/experiments/strategy_c_pi_client.py", line 144, in main
+    model, warm_started = build_live_model(len(classes), learning_rate=LR)
+                          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adi6034/thesis/edge/edgeComputing/src/experiments/pi_live.py", line 154, in build_live_model
+    from src.server.training.models.audio_cnn import AudioCNN
+ModuleNotFoundError: No module named 'src.server.training.models'

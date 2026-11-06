@@ -1,0 +1,163 @@
+{"tick": 1, "file": "tick0001", "time": 1793838724.513, "rms": 0.0077, "detections": []}
+{"tick": 2, "file": "tick0002", "time": 1793838725.398, "rms": 0.0078, "detections": [{"class": "chair", "conf": 0.252}]}
+{"tick": 3, "file": "tick0003", "time": 1793838726.39, "rms": 0.0077, "detections": [{"class": "person", "conf": 0.327}]}
+{"tick": 4, "file": "tick0004", "time": 1793838727.416, "rms": 0.0078, "detections": []}
+{"tick": 5, "file": "tick0005", "time": 1793838728.407, "rms": 0.0079, "detections": [{"class": "person", "conf": 0.766}, {"class": "person", "conf": 0.308}]}
+{"tick": 6, "file": "tick0006", "time": 1793838729.399, "rms": 0.0077, "detections": [{"class": "traffic light", "conf": 0.599}, {"class": "person", "conf": 0.458}]}
+{"tick": 7, "file": "tick0007", "time": 1793838730.394, "rms": 0.0078, "detections": [{"class": "traffic light", "conf": 0.62}, {"class": "traffic light", "conf": 0.463}, {"class": "person", "conf": 0.427}, {"class": "person", "conf": 0.404}]}
+{"tick": 8, "file": "tick0008", "time": 1793838731.416, "rms": 0.008, "detections": [{"class": "traffic light", "conf": 0.792}, {"class": "person", "conf": 0.46}, {"class": "person", "conf": 0.364}, {"class": "chair", "conf": 0.36}]}
+{"tick": 9, "file": "tick0009", "time": 1793838732.421, "rms": 0.0077, "detections": [{"class": "traffic light", "conf": 0.455}, {"class": "person", "conf": 0.41}, {"class": "person", "conf": 0.347}]}
+{"tick": 10, "file": "tick0010", "time": 1793838733.399, "rms": 0.0078, "detections": [{"class": "traffic light", "conf": 0.77}, {"class": "person", "conf": 0.441}, {"class": "traffic light", "conf": 0.382}, {"class": "person", "conf": 0.36}]}
+{"tick": 11, "file": "tick0011", "time": 1793838734.392, "rms": 0.0076, "detections": [{"class": "person", "conf": 0.446}, {"class": "person", "conf": 0.347}, {"class": "cup", "conf": 0.285}]}
+{"tick": 12, "file": "tick0012", "time": 1793838735.416, "rms": 0.0074, "detections": [{"class": "person", "conf": 0.643}, {"class": "chair", "conf": 0.485}, {"class": "person", "conf": 0.312}]}
+{"tick": 13, "file": "tick0013", "time": 1793838736.409, "rms": 0.0077, "detections": []}
+{"tick": 14, "file": "tick0014", "time": 1793838737.4, "rms": 0.0081, "detections": [{"class": "person", "conf": 0.251}]}
+{"tick": 15, "file": "tick0015", "time": 1793838738.406, "rms": 0.0079, "detections": [{"class": "person", "conf": 0.3}]}
+{"tick": 16, "file": "tick0016", "time": 1793838739.415, "rms": 0.0079, "detections": [{"class": "cup", "conf": 0.283}]}
+{"tick": 17, "file": "tick0017", "time": 1793838740.41, "rms": 0.008, "detections": [{"class": "cup", "conf": 0.311}, {"class": "person", "conf": 0.257}]}
+{"tick": 18, "file": "tick0018", "time": 1793838741.4, "rms": 0.0078, "detections": [{"class": "person", "conf": 0.297}]}
+{"tick": 19, "file": "tick0019", "time": 1793838742.393, "rms": 0.0079, "detections": [{"class": "person", "conf": 0.282}]}
+{"tick": 20, "file": "tick0020", "time": 1793838743.436, "rms": 0.0089, "detections": [{"class": "person", "conf": 0.268}, {"class": "cup", "conf": 0.257}]}
+{"tick": 21, "file": "tick0021", "time": 1793838744.407, "rms": 0.0079, "detections": [{"class": "person", "conf": 0.362}, {"class": "cup", "conf": 0.36}]}
+{"tick": 22, "file": "tick0022", "time": 1793838745.401, "rms": 0.0078, "detections": [{"class": "parking meter", "conf": 0.453}]}
+{"tick": 23, "file": "tick0023", "time": 1793838746.393, "rms": 0.0089, "detections": []}
+{"tick": 24, "file": "tick0024", "time": 1793838747.416, "rms": 0.0222, "detections": [{"class": "laptop", "conf": 0.647}]}
+{"tick": 25, "file": "tick0025", "time": 1793838748.41, "rms": 0.0145, "detections": [{"class": "laptop", "conf": 0.739}, {"class": "person", "conf": 0.304}]}
+{"tick": 26, "file": "tick0026", "time": 1793838749.399, "rms": 0.0083, "detections": [{"class": "laptop", "conf": 0.778}]}
+{"tick": 27, "file": "tick0027", "time": 1793838750.394, "rms": 0.0091, "detections": [{"class": "laptop", "conf": 0.643}, {"class": "chair", "conf": 0.291}]}
+{"tick": 28, "file": "tick0028", "time": 1793838751.419, "rms": 0.0067, "detections": [{"class": "cell phone", "conf": 0.487}]}
+{"tick": 29, "file": "tick0029", "time": 1793838752.409, "rms": 0.0056, "detections": [{"class": "traffic light", "conf": 0.484}, {"class": "traffic light", "conf": 0.433}, {"class": "traffic light", "conf": 0.347}]}
+{"tick": 30, "file": "tick0030", "time": 1793838753.423, "rms": 0.0078, "detections": [{"class": "person", "conf": 0.507}, {"class": "parking meter", "conf": 0.387}]}
+{"tick": 31, "file": "tick0031", "time": 1793838754.392, "rms": 0.0091, "detections": [{"class": "person", "conf": 0.643}]}
+{"tick": 32, "file": "tick0032", "time": 1793838755.414, "rms": 0.0108, "detections": [{"class": "parking meter", "conf": 0.316}]}
+{"tick": 33, "file": "tick0033", "time": 1793838756.408, "rms": 0.011, "detections": [{"class": "parking meter", "conf": 0.443}, {"class": "cell phone", "conf": 0.293}, {"class": "person", "conf": 0.292}]}
+{"tick": 34, "file": "tick0034", "time": 1793838757.401, "rms": 0.0113, "detections": []}
+{"tick": 35, "file": "tick0035", "time": 1793838758.39, "rms": 0.0107, "detections": []}
+{"tick": 36, "file": "tick0036", "time": 1793838759.442, "rms": 0.0106, "detections": [{"class": "person", "conf": 0.255}]}
+{"tick": 37, "file": "tick0037", "time": 1793838760.407, "rms": 0.0157, "detections": []}
+{"tick": 38, "file": "tick0038", "time": 1793838761.398, "rms": 0.0135, "detections": []}
+{"tick": 39, "file": "tick0039", "time": 1793838762.39, "rms": 0.0133, "detections": []}
+{"tick": 40, "file": "tick0040", "time": 1793838763.414, "rms": 0.0181, "detections": []}
+{"tick": 41, "file": "tick0041", "time": 1793838764.427, "rms": 0.0155, "detections": []}
+{"tick": 42, "file": "tick0042", "time": 1793838765.398, "rms": 0.0094, "detections": [{"class": "person", "conf": 0.454}, {"class": "cell phone", "conf": 0.333}]}
+{"tick": 43, "file": "tick0043", "time": 1793838766.392, "rms": 0.0086, "detections": [{"class": "cell phone", "conf": 0.464}]}
+{"tick": 44, "file": "tick0044", "time": 1793838767.414, "rms": 0.0071, "detections": [{"class": "airplane", "conf": 0.281}]}
+{"tick": 45, "file": "tick0045", "time": 1793838768.408, "rms": 0.0059, "detections": [{"class": "cell phone", "conf": 0.386}]}
+{"tick": 46, "file": "tick0046", "time": 1793838769.42, "rms": 0.0067, "detections": [{"class": "person", "conf": 0.375}]}
+{"tick": 47, "file": "tick0047", "time": 1793838770.393, "rms": 0.0072, "detections": []}
+{"tick": 48, "file": "tick0048", "time": 1793838771.414, "rms": 0.0063, "detections": []}
+{"tick": 49, "file": "tick0049", "time": 1793838772.411, "rms": 0.0059, "detections": []}
+{"tick": 50, "file": "tick0050", "time": 1793838773.4, "rms": 0.0061, "detections": []}
+{"tick": 51, "file": "tick0051", "time": 1793838774.392, "rms": 0.0076, "detections": []}
+{"tick": 52, "file": "tick0052", "time": 1793838775.443, "rms": 0.0078, "detections": [{"class": "person", "conf": 0.692}]}
+{"tick": 53, "file": "tick0053", "time": 1793838776.409, "rms": 0.0075, "detections": [{"class": "person", "conf": 0.652}]}
+{"tick": 54, "file": "tick0054", "time": 1793838777.401, "rms": 0.0072, "detections": []}
+{"tick": 55, "file": "tick0055", "time": 1793838778.394, "rms": 0.0071, "detections": []}
+{"tick": 56, "file": "tick0056", "time": 1793838779.417, "rms": 0.0073, "detections": [{"class": "traffic light", "conf": 0.316}]}
+{"tick": 57, "file": "tick0057", "time": 1793838780.45, "rms": 0.0082, "detections": [{"class": "traffic light", "conf": 0.332}]}
+{"tick": 58, "file": "tick0058", "time": 1793838781.398, "rms": 0.01, "detections": [{"class": "traffic light", "conf": 0.527}]}
+{"tick": 59, "file": "tick0059", "time": 1793838782.391, "rms": 0.0085, "detections": []}
+{"tick": 60, "file": "tick0060", "time": 1793838783.415, "rms": 0.009, "detections": []}
+{"tick": 61, "file": "tick0061", "time": 1793838784.409, "rms": 0.0098, "detections": []}
+{"tick": 62, "file": "tick0062", "time": 1793838785.416, "rms": 0.0089, "detections": []}
+{"tick": 63, "file": "tick0063", "time": 1793838786.392, "rms": 0.01, "detections": []}
+{"tick": 64, "file": "tick0064", "time": 1793838787.508, "rms": 0.0075, "detections": []}
+{"tick": 65, "file": "tick0065", "time": 1793838788.409, "rms": 0.0085, "detections": [{"class": "cell phone", "conf": 0.437}]}
+{"tick": 66, "file": "tick0066", "time": 1793838789.398, "rms": 0.0101, "detections": []}
+{"tick": 67, "file": "tick0067", "time": 1793838790.393, "rms": 0.0084, "detections": []}
+{"tick": 68, "file": "tick0068", "time": 1793838791.432, "rms": 0.0082, "detections": [{"class": "traffic light", "conf": 0.385}, {"class": "traffic light", "conf": 0.315}]}
+{"tick": 69, "file": "tick0069", "time": 1793838792.408, "rms": 0.0092, "detections": []}
+{"tick": 70, "file": "tick0070", "time": 1793838793.399, "rms": 0.0087, "detections": []}
+{"tick": 71, "file": "tick0071", "time": 1793838794.392, "rms": 0.0087, "detections": []}
+{"tick": 72, "file": "tick0072", "time": 1793838795.415, "rms": 0.0094, "detections": []}
+{"tick": 73, "file": "tick0073", "time": 1793838796.431, "rms": 0.0084, "detections": []}
+{"tick": 74, "file": "tick0074", "time": 1793838797.398, "rms": 0.0107, "detections": []}
+{"tick": 75, "file": "tick0075", "time": 1793838798.392, "rms": 0.0111, "detections": []}
+{"tick": 76, "file": "tick0076", "time": 1793838799.415, "rms": 0.0101, "detections": []}
+{"tick": 77, "file": "tick0077", "time": 1793838800.476, "rms": 0.011, "detections": []}
+{"tick": 78, "file": "tick0078", "time": 1793838801.424, "rms": 0.0081, "detections": [{"class": "traffic light", "conf": 0.314}]}
+{"tick": 79, "file": "tick0079", "time": 1793838802.399, "rms": 0.0093, "detections": [{"class": "traffic light", "conf": 0.363}]}
+{"tick": 80, "file": "tick0080", "time": 1793838803.417, "rms": 0.011, "detections": []}
+{"tick": 81, "file": "tick0081", "time": 1793838804.409, "rms": 0.009, "detections": []}
+{"tick": 82, "file": "tick0082", "time": 1793838805.401, "rms": 0.0082, "detections": [{"class": "traffic light", "conf": 0.517}]}
+{"tick": 83, "file": "tick0083", "time": 1793838806.396, "rms": 0.0101, "detections": []}
+{"tick": 84, "file": "tick0084", "time": 1793838807.443, "rms": 0.0092, "detections": [{"class": "cat", "conf": 0.328}]}
+{"tick": 85, "file": "tick0085", "time": 1793838808.415, "rms": 0.0114, "detections": []}
+{"tick": 86, "file": "tick0086", "time": 1793838809.401, "rms": 0.0085, "detections": []}
+{"tick": 87, "file": "tick0087", "time": 1793838810.392, "rms": 0.0081, "detections": [{"class": "traffic light", "conf": 0.543}]}
+{"tick": 88, "file": "tick0088", "time": 1793838811.419, "rms": 0.0086, "detections": [{"class": "traffic light", "conf": 0.425}]}
+{"tick": 89, "file": "tick0089", "time": 1793838812.427, "rms": 0.0081, "detections": []}
+{"tick": 90, "file": "tick0090", "time": 1793838813.402, "rms": 0.0081, "detections": []}
+{"tick": 91, "file": "tick0091", "time": 1793838814.395, "rms": 0.008, "detections": [{"class": "airplane", "conf": 0.398}]}
+{"tick": 92, "file": "tick0092", "time": 1793838815.419, "rms": 0.0079, "detections": [{"class": "person", "conf": 0.305}]}
+{"tick": 93, "file": "tick0093", "time": 1793838816.408, "rms": 0.0072, "detections": [{"class": "person", "conf": 0.642}]}
+{"tick": 94, "file": "tick0094", "time": 1793838817.425, "rms": 0.0068, "detections": [{"class": "person", "conf": 0.524}]}
+{"tick": 95, "file": "tick0095", "time": 1793838818.395, "rms": 0.0075, "detections": [{"class": "person", "conf": 0.581}]}
+{"tick": 96, "file": "tick0096", "time": 1793838819.441, "rms": 0.0076, "detections": [{"class": "cell phone", "conf": 0.354}]}
+{"tick": 97, "file": "tick0097", "time": 1793838820.409, "rms": 0.0086, "detections": [{"class": "cell phone", "conf": 0.419}]}
+{"tick": 98, "file": "tick0098", "time": 1793838821.402, "rms": 0.0128, "detections": [{"class": "cell phone", "conf": 0.58}]}
+{"tick": 99, "file": "tick0099", "time": 1793838822.393, "rms": 0.0078, "detections": []}
+{"tick": 100, "file": "tick0100", "time": 1793838823.435, "rms": 0.0085, "detections": [{"class": "cell phone", "conf": 0.53}]}
+{"tick": 101, "file": "tick0101", "time": 1793838824.41, "rms": 0.0084, "detections": []}
+{"tick": 102, "file": "tick0102", "time": 1793838825.473, "rms": 0.0089, "detections": [{"class": "cell phone", "conf": 0.407}]}
+{"tick": 103, "file": "tick0103", "time": 1793838826.393, "rms": 0.0075, "detections": [{"class": "cell phone", "conf": 0.363}, {"class": "traffic light", "conf": 0.317}]}
+{"tick": 104, "file": "tick0104", "time": 1793838827.419, "rms": 0.0072, "detections": [{"class": "traffic light", "conf": 0.456}, {"class": "cell phone", "conf": 0.365}]}
+{"tick": 105, "file": "tick0105", "time": 1793838828.431, "rms": 0.0074, "detections": [{"class": "traffic light", "conf": 0.595}]}
+{"tick": 106, "file": "tick0106", "time": 1793838829.403, "rms": 0.0078, "detections": [{"class": "traffic light", "conf": 0.418}, {"class": "cell phone", "conf": 0.33}]}
+{"tick": 107, "file": "tick0107", "time": 1793838830.392, "rms": 0.0082, "detections": [{"class": "traffic light", "conf": 0.437}, {"class": "cell phone", "conf": 0.352}]}
+{"tick": 108, "file": "tick0108", "time": 1793838831.422, "rms": 0.0084, "detections": [{"class": "cell phone", "conf": 0.523}]}
+{"tick": 109, "file": "tick0109", "time": 1793838832.41, "rms": 0.0083, "detections": [{"class": "cell phone", "conf": 0.484}, {"class": "traffic light", "conf": 0.342}]}
+{"tick": 110, "file": "tick0110", "time": 1793838833.427, "rms": 0.0072, "detections": [{"class": "cell phone", "conf": 0.598}]}
+{"tick": 111, "file": "tick0111", "time": 1793838834.399, "rms": 0.0073, "detections": [{"class": "cell phone", "conf": 0.643}]}
+{"tick": 112, "file": "tick0112", "time": 1793838835.424, "rms": 0.006, "detections": [{"class": "cell phone", "conf": 0.529}]}
+{"tick": 113, "file": "tick0113", "time": 1793838836.412, "rms": 0.0084, "detections": [{"class": "cell phone", "conf": 0.543}]}
+{"tick": 114, "file": "tick0114", "time": 1793838837.409, "rms": 0.0082, "detections": [{"class": "cell phone", "conf": 0.519}, {"class": "chair", "conf": 0.298}]}
+{"tick": 115, "file": "tick0115", "time": 1793838838.398, "rms": 0.0098, "detections": [{"class": "cell phone", "conf": 0.634}]}
+{"tick": 116, "file": "tick0116", "time": 1793838839.445, "rms": 0.0097, "detections": [{"class": "cell phone", "conf": 0.579}]}
+{"tick": 117, "file": "tick0117", "time": 1793838840.409, "rms": 0.0222, "detections": [{"class": "cell phone", "conf": 0.834}]}
+{"tick": 118, "file": "tick0118", "time": 1793838841.404, "rms": 0.0073, "detections": [{"class": "cell phone", "conf": 0.634}]}
+{"tick": 119, "file": "tick0119", "time": 1793838842.394, "rms": 0.0079, "detections": [{"class": "frisbee", "conf": 0.315}]}
+{"tick": 120, "file": "tick0120", "time": 1793838843.424, "rms": 0.0122, "detections": [{"class": "sports ball", "conf": 0.462}, {"class": "mouse", "conf": 0.338}]}
+{"tick": 121, "file": "tick0121", "time": 1793838844.433, "rms": 0.0095, "detections": [{"class": "sports ball", "conf": 0.622}, {"class": "mouse", "conf": 0.614}]}
+{"tick": 122, "file": "tick0122", "time": 1793838845.407, "rms": 0.0081, "detections": [{"class": "sports ball", "conf": 0.268}]}
+{"tick": 123, "file": "tick0123", "time": 1793838846.394, "rms": 0.0097, "detections": []}
+{"tick": 124, "file": "tick0124", "time": 1793838847.421, "rms": 0.0098, "detections": []}
+{"tick": 125, "file": "tick0125", "time": 1793838848.412, "rms": 0.0213, "detections": []}
+{"tick": 126, "file": "tick0126", "time": 1793838849.43, "rms": 0.0263, "detections": []}
+{"tick": 127, "file": "tick0127", "time": 1793838850.396, "rms": 0.0086, "detections": []}
+{"tick": 128, "file": "tick0128", "time": 1793838851.423, "rms": 0.0337, "detections": []}
+{"tick": 129, "file": "tick0129", "time": 1793838852.412, "rms": 0.008, "detections": [{"class": "laptop", "conf": 0.343}, {"class": "cell phone", "conf": 0.275}]}
+{"tick": 130, "file": "tick0130", "time": 1793838853.407, "rms": 0.0079, "detections": [{"class": "laptop", "conf": 0.275}]}
+{"tick": 131, "file": "tick0131", "time": 1793838854.396, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.447}]}
+{"tick": 132, "file": "tick0132", "time": 1793838855.449, "rms": 0.0075, "detections": [{"class": "cell phone", "conf": 0.286}]}
+{"tick": 133, "file": "tick0133", "time": 1793838856.413, "rms": 0.0074, "detections": []}
+{"tick": 134, "file": "tick0134", "time": 1793838857.404, "rms": 0.0076, "detections": [{"class": "traffic light", "conf": 0.287}]}
+{"tick": 135, "file": "tick0135", "time": 1793838858.394, "rms": 0.0074, "detections": []}
+{"tick": 136, "file": "tick0136", "time": 1793838859.42, "rms": 0.0074, "detections": []}
+{"tick": 137, "file": "tick0137", "time": 1793838860.453, "rms": 0.0075, "detections": []}
+{"tick": 138, "file": "tick0138", "time": 1793838861.461, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.287}]}
+{"tick": 139, "file": "tick0139", "time": 1793838862.394, "rms": 0.0076, "detections": [{"class": "cell phone", "conf": 0.756}]}
+{"tick": 140, "file": "tick0140", "time": 1793838863.421, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.765}]}
+{"tick": 141, "file": "tick0141", "time": 1793838864.409, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.6}, {"class": "person", "conf": 0.384}]}
+{"tick": 142, "file": "tick0142", "time": 1793838865.423, "rms": 0.0081, "detections": [{"class": "person", "conf": 0.439}, {"class": "cell phone", "conf": 0.252}]}
+{"tick": 143, "file": "tick0143", "time": 1793838866.396, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.485}]}
+{"tick": 144, "file": "tick0144", "time": 1793838867.426, "rms": 0.0081, "detections": [{"class": "tv", "conf": 0.379}]}
+{"tick": 145, "file": "tick0145", "time": 1793838868.413, "rms": 0.0077, "detections": [{"class": "tv", "conf": 0.315}]}
+{"tick": 146, "file": "tick0146", "time": 1793838869.407, "rms": 0.0077, "detections": [{"class": "tv", "conf": 0.39}]}
+{"tick": 147, "file": "tick0147", "time": 1793838870.401, "rms": 0.0079, "detections": [{"class": "tv", "conf": 0.274}]}
+{"tick": 148, "file": "tick0148", "time": 1793838871.44, "rms": 0.0079, "detections": []}
+{"tick": 149, "file": "tick0149", "time": 1793838872.413, "rms": 0.008, "detections": []}
+{"tick": 150, "file": "tick0150", "time": 1793838873.467, "rms": 0.0082, "detections": []}
+{"tick": 151, "file": "tick0151", "time": 1793838874.4, "rms": 0.008, "detections": [{"class": "tv", "conf": 0.307}]}
+{"tick": 152, "file": "tick0152", "time": 1793838875.423, "rms": 0.008, "detections": []}
+{"tick": 153, "file": "tick0153", "time": 1793838876.435, "rms": 0.0079, "detections": []}
+{"tick": 154, "file": "tick0154", "time": 1793838877.409, "rms": 0.0081, "detections": []}
+{"tick": 155, "file": "tick0155", "time": 1793838878.396, "rms": 0.0081, "detections": [{"class": "tv", "conf": 0.268}]}
+{"tick": 156, "file": "tick0156", "time": 1793838879.424, "rms": 0.0079, "detections": [{"class": "tv", "conf": 0.349}, {"class": "cell phone", "conf": 0.316}]}
+{"tick": 157, "file": "tick0157", "time": 1793838880.415, "rms": 0.0077, "detections": [{"class": "cell phone", "conf": 0.618}]}
+{"tick": 158, "file": "tick0158", "time": 1793838881.429, "rms": 0.0079, "detections": [{"class": "tv", "conf": 0.371}]}
+{"tick": 159, "file": "tick0159", "time": 1793838882.397, "rms": 0.0079, "detections": []}
+{"tick": 160, "file": "tick0160", "time": 1793838883.423, "rms": 0.0081, "detections": [{"class": "tv", "conf": 0.367}]}
+{"tick": 161, "file": "tick0161", "time": 1793838884.413, "rms": 0.0079, "detections": [{"class": "cell phone", "conf": 0.364}, {"class": "tv", "conf": 0.327}]}
+{"tick": 162, "file": "tick0162", "time": 1793838885.407, "rms": 0.0078, "detections": [{"class": "cell phone", "conf": 0.551}, {"class": "tv", "conf": 0.295}]}
+{"tick": 163, "file": "tick0163", "time": 1793838886.456, "rms": 0.0077, "detections": [{"class": "tv", "conf": 0.433}, {"class": "cell phone", "conf": 0.425}]}

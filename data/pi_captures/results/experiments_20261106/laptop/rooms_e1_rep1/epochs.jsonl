@@ -1,0 +1,120 @@
+{"who": "client_A", "kind": "train", "step": 1, "accuracy": 0.7207792401313782, "loss": 0.8070688247680664, "time": 1793979167.015003, "round": 1, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 1, "accuracy": 0.5874999761581421, "loss": 1.0974360704421997, "time": 1793979167.026578, "round": 1, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 1, "accuracy": 0.24271844327449799, "loss": 1.750986933708191, "time": 1793979169.263745, "round": 1}
+{"who": "client_B", "kind": "train", "step": 2, "accuracy": 0.800000011920929, "loss": 0.6234828233718872, "time": 1793979174.677053, "round": 2, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 2, "accuracy": 0.7922077775001526, "loss": 0.6116389036178589, "time": 1793979174.696618, "round": 2, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 2, "accuracy": 0.6213592290878296, "loss": 1.039561152458191, "time": 1793979174.902138, "round": 2}
+{"who": "client_A", "kind": "train", "step": 3, "accuracy": 0.8766233921051025, "loss": 0.4435683488845825, "time": 1793979180.552725, "round": 3, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 3, "accuracy": 0.831250011920929, "loss": 0.5004374980926514, "time": 1793979180.6287029, "round": 3, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 3, "accuracy": 0.6116504669189453, "loss": 0.9705007076263428, "time": 1793979180.8327308, "round": 3}
+{"who": "client_A", "kind": "train", "step": 4, "accuracy": 0.8831169009208679, "loss": 0.49351224303245544, "time": 1793979186.0646741, "round": 4, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 4, "accuracy": 0.8500000238418579, "loss": 0.4444672465324402, "time": 1793979186.22835, "round": 4, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 4, "accuracy": 0.7864077687263489, "loss": 0.7236344218254089, "time": 1793979188.538496, "round": 4}
+{"who": "client_B", "kind": "train", "step": 5, "accuracy": 0.8500000238418579, "loss": 0.4040941298007965, "time": 1793979193.861629, "round": 5, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 5, "accuracy": 0.8831169009208679, "loss": 0.39589589834213257, "time": 1793979193.869013, "round": 5, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 5, "accuracy": 0.7184466123580933, "loss": 0.7363815307617188, "time": 1793979194.1560981, "round": 5}
+{"who": "client_A", "kind": "train", "step": 6, "accuracy": 0.9090909361839294, "loss": 0.365761399269104, "time": 1793979199.4900422, "round": 6, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 6, "accuracy": 0.856249988079071, "loss": 0.46327075362205505, "time": 1793979199.550179, "round": 6, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 6, "accuracy": 0.7572815418243408, "loss": 0.6640257835388184, "time": 1793979199.747176, "round": 6}
+{"who": "client_A", "kind": "train", "step": 7, "accuracy": 0.8311688303947449, "loss": 0.38569509983062744, "time": 1793979205.123722, "round": 7, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 7, "accuracy": 0.90625, "loss": 0.4104979932308197, "time": 1793979205.157252, "round": 7, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 7, "accuracy": 0.7281553149223328, "loss": 0.7483188509941101, "time": 1793979205.343374, "round": 7}
+{"who": "client_A", "kind": "train", "step": 8, "accuracy": 0.9220778942108154, "loss": 0.3018021285533905, "time": 1793979210.634878, "round": 8, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 8, "accuracy": 0.84375, "loss": 0.4119919240474701, "time": 1793979210.730155, "round": 8, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 8, "accuracy": 0.6601941585540771, "loss": 0.7155624032020569, "time": 1793979210.934238, "round": 8}
+{"who": "client_A", "kind": "train", "step": 9, "accuracy": 0.8831169009208679, "loss": 0.3834666609764099, "time": 1793979216.180841, "round": 9, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 9, "accuracy": 0.84375, "loss": 0.548454225063324, "time": 1793979216.324363, "round": 9, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 9, "accuracy": 0.737864077091217, "loss": 0.7211138606071472, "time": 1793979216.510823, "round": 9}
+{"who": "client_A", "kind": "train", "step": 10, "accuracy": 0.9350649118423462, "loss": 0.25419285893440247, "time": 1793979222.33007, "round": 10, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 10, "accuracy": 0.893750011920929, "loss": 0.36843809485435486, "time": 1793979222.4352472, "round": 10, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 10, "accuracy": 0.7961165308952332, "loss": 0.5564836859703064, "time": 1793979224.7245061, "round": 10}
+{"who": "client_A", "kind": "train", "step": 11, "accuracy": 0.8441558480262756, "loss": 0.3724541962146759, "time": 1793979229.999774, "round": 11, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 11, "accuracy": 0.893750011920929, "loss": 0.318024605512619, "time": 1793979230.10455, "round": 11, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 11, "accuracy": 0.7572815418243408, "loss": 0.6062980890274048, "time": 1793979230.305866, "round": 11}
+{"who": "client_A", "kind": "train", "step": 12, "accuracy": 0.8766233921051025, "loss": 0.4179285764694214, "time": 1793979235.6077921, "round": 12, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 12, "accuracy": 0.800000011920929, "loss": 0.5871536731719971, "time": 1793979235.647433, "round": 12, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 12, "accuracy": 0.7475728392601013, "loss": 0.7247738242149353, "time": 1793979235.856799, "round": 12}
+{"who": "client_A", "kind": "train", "step": 13, "accuracy": 0.8961039185523987, "loss": 0.25320351123809814, "time": 1793979241.164078, "round": 13, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 13, "accuracy": 0.875, "loss": 0.3672829568386078, "time": 1793979241.2380118, "round": 13, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 13, "accuracy": 0.8058252334594727, "loss": 0.5127142667770386, "time": 1793979241.40632, "round": 13}
+{"who": "client_A", "kind": "train", "step": 14, "accuracy": 0.9090909361839294, "loss": 0.3262072801589966, "time": 1793979246.6720269, "round": 14, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 14, "accuracy": 0.893750011920929, "loss": 0.2970353364944458, "time": 1793979246.804797, "round": 14, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 14, "accuracy": 0.6893203854560852, "loss": 0.7838956713676453, "time": 1793979249.1463969, "round": 14}
+{"who": "client_A", "kind": "train", "step": 15, "accuracy": 0.9090909361839294, "loss": 0.24037685990333557, "time": 1793979254.4809558, "round": 15, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 15, "accuracy": 0.862500011920929, "loss": 0.40485087037086487, "time": 1793979254.556184, "round": 15, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 15, "accuracy": 0.6893203854560852, "loss": 0.8527823090553284, "time": 1793979254.759594, "round": 15}
+{"who": "client_A", "kind": "train", "step": 16, "accuracy": 0.9090909361839294, "loss": 0.34611776471138, "time": 1793979260.026481, "round": 16, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 16, "accuracy": 0.893750011920929, "loss": 0.39122700691223145, "time": 1793979260.143847, "round": 16, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 16, "accuracy": 0.8252426981925964, "loss": 0.4855077862739563, "time": 1793979260.324416, "round": 16}
+{"who": "client_B", "kind": "train", "step": 17, "accuracy": 0.8687499761581421, "loss": 0.3555973470211029, "time": 1793979265.742069, "round": 17, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 17, "accuracy": 0.9350649118423462, "loss": 0.29497474431991577, "time": 1793979266.264169, "round": 17, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 17, "accuracy": 0.6019417643547058, "loss": 1.0913256406784058, "time": 1793979267.9635332, "round": 17}
+{"who": "client_A", "kind": "train", "step": 18, "accuracy": 0.9285714030265808, "loss": 0.17797096073627472, "time": 1793979273.319478, "round": 18, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 18, "accuracy": 0.887499988079071, "loss": 0.34153783321380615, "time": 1793979274.579262, "round": 18, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 18, "accuracy": 0.6893203854560852, "loss": 0.907306432723999, "time": 1793979274.853143, "round": 18}
+{"who": "client_A", "kind": "train", "step": 19, "accuracy": 0.9285714030265808, "loss": 0.21902190148830414, "time": 1793979280.150456, "round": 19, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 19, "accuracy": 0.875, "loss": 0.35593417286872864, "time": 1793979280.270924, "round": 19, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 19, "accuracy": 0.7961165308952332, "loss": 0.5938897132873535, "time": 1793979280.500631, "round": 19}
+{"who": "client_A", "kind": "train", "step": 20, "accuracy": 0.9155844449996948, "loss": 0.27976447343826294, "time": 1793979285.801086, "round": 20, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 20, "accuracy": 0.8812500238418579, "loss": 0.37182849645614624, "time": 1793979285.927925, "round": 20, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 20, "accuracy": 0.7864077687263489, "loss": 0.5335841774940491, "time": 1793979286.164926, "round": 20}
+{"who": "client_A", "kind": "train", "step": 21, "accuracy": 0.9155844449996948, "loss": 0.20441316068172455, "time": 1793979291.417472, "round": 21, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 21, "accuracy": 0.875, "loss": 0.33706486225128174, "time": 1793979291.573299, "round": 21, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 21, "accuracy": 0.7864077687263489, "loss": 0.4971259832382202, "time": 1793979293.867359, "round": 21}
+{"who": "client_A", "kind": "train", "step": 22, "accuracy": 0.8961039185523987, "loss": 0.23720109462738037, "time": 1793979299.1484318, "round": 22, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 22, "accuracy": 0.8812500238418579, "loss": 0.30525946617126465, "time": 1793979299.356576, "round": 22, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 22, "accuracy": 0.708737850189209, "loss": 0.7197266221046448, "time": 1793979299.584264, "round": 22}
+{"who": "client_A", "kind": "train", "step": 23, "accuracy": 0.9545454382896423, "loss": 0.1422361582517624, "time": 1793979304.849772, "round": 23, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 23, "accuracy": 0.893750011920929, "loss": 0.2904885411262512, "time": 1793979304.974266, "round": 23, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 23, "accuracy": 0.8058252334594727, "loss": 0.569656252861023, "time": 1793979305.237275, "round": 23}
+{"who": "client_A", "kind": "train", "step": 24, "accuracy": 0.8766233921051025, "loss": 0.3419404625892639, "time": 1793979310.5856068, "round": 24, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 24, "accuracy": 0.875, "loss": 0.32587122917175293, "time": 1793979310.616916, "round": 24, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 24, "accuracy": 0.7864077687263489, "loss": 0.6968774199485779, "time": 1793979312.8683221, "round": 24}
+{"who": "client_A", "kind": "train", "step": 25, "accuracy": 0.9025974273681641, "loss": 0.2702149450778961, "time": 1793979318.169204, "round": 25, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 25, "accuracy": 0.9125000238418579, "loss": 0.31317800283432007, "time": 1793979318.196586, "round": 25, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 25, "accuracy": 0.7669903039932251, "loss": 0.7237831950187683, "time": 1793979318.468517, "round": 25}
+{"who": "client_A", "kind": "train", "step": 26, "accuracy": 0.9350649118423462, "loss": 0.22362840175628662, "time": 1793979323.761814, "round": 26, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 26, "accuracy": 0.875, "loss": 0.2960897982120514, "time": 1793979323.877972, "round": 26, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 26, "accuracy": 0.7281553149223328, "loss": 1.0209250450134277, "time": 1793979324.170788, "round": 26}
+{"who": "client_B", "kind": "train", "step": 27, "accuracy": 0.856249988079071, "loss": 0.39329081773757935, "time": 1793979329.575802, "round": 27, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 27, "accuracy": 0.9155844449996948, "loss": 0.24730469286441803, "time": 1793979330.3281112, "round": 27, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 27, "accuracy": 0.6699029207229614, "loss": 1.0272477865219116, "time": 1793979330.57048, "round": 27}
+{"who": "client_A", "kind": "train", "step": 28, "accuracy": 0.9610389471054077, "loss": 0.17455218732357025, "time": 1793979335.972136, "round": 28, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 28, "accuracy": 0.925000011920929, "loss": 0.3013848066329956, "time": 1793979336.867584, "round": 28, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 28, "accuracy": 0.8155339956283569, "loss": 0.48611074686050415, "time": 1793979337.086524, "round": 28}
+{"who": "client_A", "kind": "train", "step": 29, "accuracy": 0.9350649118423462, "loss": 0.1508910208940506, "time": 1793979342.402381, "round": 29, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 29, "accuracy": 0.9125000238418579, "loss": 0.2642695903778076, "time": 1793979342.491816, "round": 29, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 29, "accuracy": 0.5339806079864502, "loss": 1.9729082584381104, "time": 1793979344.83183, "round": 29}
+{"who": "client_A", "kind": "train", "step": 30, "accuracy": 0.9220778942108154, "loss": 0.23037005960941315, "time": 1793979350.1251771, "round": 30, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 30, "accuracy": 0.9125000238418579, "loss": 0.3099985122680664, "time": 1793979350.2230048, "round": 30, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 30, "accuracy": 0.8349514603614807, "loss": 0.53980553150177, "time": 1793979350.438567, "round": 30}
+{"who": "client_A", "kind": "train", "step": 31, "accuracy": 0.9350649118423462, "loss": 0.33479464054107666, "time": 1793979355.69632, "round": 31, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 31, "accuracy": 0.925000011920929, "loss": 0.18380938470363617, "time": 1793979355.814081, "round": 31, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 31, "accuracy": 0.8252426981925964, "loss": 0.6248488426208496, "time": 1793979356.0172858, "round": 31}
+{"who": "client_A", "kind": "train", "step": 32, "accuracy": 0.9545454382896423, "loss": 0.13402917981147766, "time": 1793979361.308005, "round": 32, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 32, "accuracy": 0.925000011920929, "loss": 0.2533445954322815, "time": 1793979361.4235399, "round": 32, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 32, "accuracy": 0.708737850189209, "loss": 0.9779457449913025, "time": 1793979363.6663811, "round": 32}
+{"who": "client_A", "kind": "train", "step": 33, "accuracy": 0.9545454382896423, "loss": 0.12813511490821838, "time": 1793979368.986443, "round": 33, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 33, "accuracy": 0.8999999761581421, "loss": 0.339711457490921, "time": 1793979369.0449972, "round": 33, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 33, "accuracy": 0.737864077091217, "loss": 0.6681879758834839, "time": 1793979369.259469, "round": 33}
+{"who": "client_A", "kind": "train", "step": 34, "accuracy": 0.9675324559211731, "loss": 0.15874594449996948, "time": 1793979374.591889, "round": 34, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 34, "accuracy": 0.8999999761581421, "loss": 0.27082663774490356, "time": 1793979374.656404, "round": 34, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 34, "accuracy": 0.7961165308952332, "loss": 0.6294823288917542, "time": 1793979374.8519511, "round": 34}
+{"who": "client_A", "kind": "train", "step": 35, "accuracy": 0.9545454382896423, "loss": 0.10931020975112915, "time": 1793979380.134529, "round": 35, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 35, "accuracy": 0.9437500238418579, "loss": 0.17169655859470367, "time": 1793979380.208312, "round": 35, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 35, "accuracy": 0.7281553149223328, "loss": 0.9201592803001404, "time": 1793979380.414748, "round": 35}
+{"who": "client_A", "kind": "train", "step": 36, "accuracy": 0.9675324559211731, "loss": 0.15270449221134186, "time": 1793979385.683667, "round": 36, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 36, "accuracy": 0.875, "loss": 0.35915419459342957, "time": 1793979385.801486, "round": 36, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 36, "accuracy": 0.6990291476249695, "loss": 1.1077862977981567, "time": 1793979388.0744221, "round": 36}
+{"who": "client_A", "kind": "train", "step": 37, "accuracy": 0.9285714030265808, "loss": 0.19739125669002533, "time": 1793979393.3275788, "round": 37, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 37, "accuracy": 0.8812500238418579, "loss": 0.2750038504600525, "time": 1793979393.519422, "round": 37, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 37, "accuracy": 0.8349514603614807, "loss": 0.5131596922874451, "time": 1793979393.69963, "round": 37}
+{"who": "client_B", "kind": "train", "step": 38, "accuracy": 0.9312499761581421, "loss": 0.17342250049114227, "time": 1793979399.561389, "round": 38, "epoch": 1}
+{"who": "client_A", "kind": "train", "step": 38, "accuracy": 0.9610389471054077, "loss": 0.20087793469429016, "time": 1793979400.471371, "round": 38, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 38, "accuracy": 0.844660222530365, "loss": 0.40222716331481934, "time": 1793979400.6798139, "round": 38}
+{"who": "client_A", "kind": "train", "step": 39, "accuracy": 0.9220778942108154, "loss": 0.2383725345134735, "time": 1793979406.0323231, "round": 39, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 39, "accuracy": 0.8999999761581421, "loss": 0.28229349851608276, "time": 1793979407.230667, "round": 39, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 39, "accuracy": 0.7669903039932251, "loss": 0.751928448677063, "time": 1793979407.423676, "round": 39}
+{"who": "client_A", "kind": "train", "step": 40, "accuracy": 0.948051929473877, "loss": 0.2299746721982956, "time": 1793979412.792398, "round": 40, "epoch": 1}
+{"who": "client_B", "kind": "train", "step": 40, "accuracy": 0.9125000238418579, "loss": 0.24797920882701874, "time": 1793979412.842711, "round": 40, "epoch": 1}
+{"who": "server_test", "kind": "test", "step": 40, "accuracy": 0.7864077687263489, "loss": 0.6863144636154175, "time": 1793979413.034631, "round": 40}

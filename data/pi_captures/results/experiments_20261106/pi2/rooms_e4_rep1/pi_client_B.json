@@ -1,0 +1,63 @@
+{
+  "node_id": "B",
+  "strategy": "C_federated",
+  "mode": "live_vocabulary",
+  "dataset": "results/live/room2_shared.npz",
+  "classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person"
+  ],
+  "warm_started": true,
+  "local_samples": 160,
+  "edge_stft_seconds": 1.22,
+  "wall_seconds": 166.82,
+  "rounds_trained": 10,
+  "bytes_uploaded": 4161471,
+  "round_times": [
+    {
+      "round": 1,
+      "local_train_seconds": 14.57
+    },
+    {
+      "round": 2,
+      "local_train_seconds": 14.56
+    },
+    {
+      "round": 3,
+      "local_train_seconds": 16.92
+    },
+    {
+      "round": 4,
+      "local_train_seconds": 16.56
+    },
+    {
+      "round": 5,
+      "local_train_seconds": 16.55
+    },
+    {
+      "round": 6,
+      "local_train_seconds": 14.55
+    },
+    {
+      "round": 7,
+      "local_train_seconds": 14.54
+    },
+    {
+      "round": 8,
+      "local_train_seconds": 14.54
+    },
+    {
+      "round": 9,
+      "local_train_seconds": 16.56
+    },
+    {
+      "round": 10,
+      "local_train_seconds": 19.1
+    }
+  ],
+  "total_local_train_seconds": 158.45,
+  "raw_audio_bytes_never_sent": 2560000
+}

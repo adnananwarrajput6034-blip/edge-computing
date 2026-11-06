@@ -1,0 +1,20 @@
+{
+  "model": "results/demo_nov5/trained_c.keras",
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "threshold": 0.6,
+  "ticks": 118,
+  "heard": {
+    "background": 75,
+    "person": 6,
+    "cell phone": 35,
+    "unknown": 2
+  },
+  "unknown_rate": 0.017,
+  "vision_comparable_ticks": 0,
+  "audio_vision_agreement": null,
+  "wall_seconds": 118.5
+}

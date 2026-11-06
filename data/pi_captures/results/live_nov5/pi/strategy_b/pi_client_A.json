@@ -1,0 +1,21 @@
+{
+  "node_id": "A",
+  "strategy": "B_hybrid",
+  "mode": "live_vocabulary_replay",
+  "dataset": "results/live/live_dataset.npz",
+  "classes": [
+    "background",
+    "cell phone",
+    "person"
+  ],
+  "wall_seconds": 3.4,
+  "samples_sent": 154,
+  "batches_uploaded": 6,
+  "bytes_uploaded": 1614678,
+  "stft_time_total": 1.25,
+  "label_counts": {
+    "background": 39,
+    "person": 56,
+    "cell phone": 59
+  }
+}

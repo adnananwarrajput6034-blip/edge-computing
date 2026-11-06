@@ -1,0 +1,17 @@
+Live dataset: data/pi_captures/live_dataset.npz
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 3-way head)
+Live vocabulary ['background', 'cell phone', 'person'], test set (51, 51, 128, 1)
+Baseline test accuracy before any round: 0.235
+Server ready. Waiting for edge batches
+Round 1: weights from A (77 samples, 405 KB)
+Round 1: weights from B (77 samples, 405 KB)
+=== Round 1 FedAvg: test_acc=0.863, agg=0.28s, 2 clients ===
+Round 2: weights from A (77 samples, 405 KB)
+Round 2: weights from B (77 samples, 405 KB)
+=== Round 2 FedAvg: test_acc=0.941, agg=0.08s, 2 clients ===
+Round 3: weights from A (77 samples, 405 KB)
+Round 3: weights from B (77 samples, 405 KB)
+=== Round 3 FedAvg: test_acc=0.980, agg=0.10s, 2 clients ===
+Saved trained model -> results/two_pi_20261105/c_iid/trained.keras (3 classes: ['background', 'cell phone', 'person'])
+MQTT disconnected (rc=0)
+Server stopped. 3/3 rounds.

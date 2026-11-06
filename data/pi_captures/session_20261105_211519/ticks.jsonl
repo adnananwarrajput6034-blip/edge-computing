@@ -1,0 +1,81 @@
+{"tick": 1, "file": "tick0001", "time": 1793909728.616, "rms": 0.0112, "detections": []}
+{"tick": 2, "file": "tick0002", "time": 1793909729.578, "rms": 0.0094, "detections": []}
+{"tick": 3, "file": "tick0003", "time": 1793909730.569, "rms": 0.0071, "detections": []}
+{"tick": 4, "file": "tick0004", "time": 1793909731.56, "rms": 0.0083, "detections": []}
+{"tick": 5, "file": "tick0005", "time": 1793909732.639, "rms": 0.0087, "detections": []}
+{"tick": 6, "file": "tick0006", "time": 1793909733.596, "rms": 0.0087, "detections": []}
+{"tick": 7, "file": "tick0007", "time": 1793909734.568, "rms": 0.0085, "detections": []}
+{"tick": 8, "file": "tick0008", "time": 1793909735.56, "rms": 0.008, "detections": []}
+{"tick": 9, "file": "tick0009", "time": 1793909736.585, "rms": 0.0076, "detections": []}
+{"tick": 10, "file": "tick0010", "time": 1793909737.576, "rms": 0.0077, "detections": []}
+{"tick": 11, "file": "tick0011", "time": 1793909738.59, "rms": 0.0127, "detections": []}
+{"tick": 12, "file": "tick0012", "time": 1793909739.563, "rms": 0.0084, "detections": []}
+{"tick": 13, "file": "tick0013", "time": 1793909740.584, "rms": 0.008, "detections": []}
+{"tick": 14, "file": "tick0014", "time": 1793909741.578, "rms": 0.0551, "detections": [{"class": "vase", "conf": 0.279}]}
+{"tick": 15, "file": "tick0015", "time": 1793909742.569, "rms": 0.0079, "detections": [{"class": "vase", "conf": 0.301}]}
+{"tick": 16, "file": "tick0016", "time": 1793909743.562, "rms": 0.0076, "detections": [{"class": "vase", "conf": 0.343}]}
+{"tick": 17, "file": "tick0017", "time": 1793909744.612, "rms": 0.0075, "detections": []}
+{"tick": 18, "file": "tick0018", "time": 1793909745.579, "rms": 0.0075, "detections": []}
+{"tick": 19, "file": "tick0019", "time": 1793909746.569, "rms": 0.0076, "detections": [{"class": "stop sign", "conf": 0.28}]}
+{"tick": 20, "file": "tick0020", "time": 1793909747.565, "rms": 0.039, "detections": []}
+{"tick": 21, "file": "tick0021", "time": 1793909748.585, "rms": 0.044, "detections": [{"class": "stop sign", "conf": 0.506}]}
+{"tick": 22, "file": "tick0022", "time": 1793909749.61, "rms": 0.0082, "detections": []}
+{"tick": 23, "file": "tick0023", "time": 1793909750.626, "rms": 0.0221, "detections": [{"class": "stop sign", "conf": 0.639}]}
+{"tick": 24, "file": "tick0024", "time": 1793909751.561, "rms": 0.0087, "detections": []}
+{"tick": 25, "file": "tick0025", "time": 1793909752.584, "rms": 0.109, "detections": [{"class": "person", "conf": 0.441}]}
+{"tick": 26, "file": "tick0026", "time": 1793909753.578, "rms": 0.0915, "detections": [{"class": "person", "conf": 0.765}]}
+{"tick": 27, "file": "tick0027", "time": 1793909754.581, "rms": 0.0598, "detections": []}
+{"tick": 28, "file": "tick0028", "time": 1793909755.561, "rms": 0.0104, "detections": []}
+{"tick": 29, "file": "tick0029", "time": 1793909756.66, "rms": 0.0104, "detections": []}
+{"tick": 30, "file": "tick0030", "time": 1793909757.576, "rms": 0.0089, "detections": []}
+{"tick": 31, "file": "tick0031", "time": 1793909758.569, "rms": 0.0784, "detections": []}
+{"tick": 32, "file": "tick0032", "time": 1793909759.561, "rms": 0.0193, "detections": [{"class": "vase", "conf": 0.532}]}
+{"tick": 33, "file": "tick0033", "time": 1793909760.606, "rms": 0.0327, "detections": [{"class": "person", "conf": 0.365}]}
+{"tick": 34, "file": "tick0034", "time": 1793909761.576, "rms": 0.0427, "detections": []}
+{"tick": 35, "file": "tick0035", "time": 1793909762.635, "rms": 0.0705, "detections": []}
+{"tick": 36, "file": "tick0036", "time": 1793909763.56, "rms": 0.0311, "detections": []}
+{"tick": 37, "file": "tick0037", "time": 1793909764.584, "rms": 0.0102, "detections": [{"class": "person", "conf": 0.342}, {"class": "person", "conf": 0.275}]}
+{"tick": 38, "file": "tick0038", "time": 1793909765.597, "rms": 0.0301, "detections": []}
+{"tick": 39, "file": "tick0039", "time": 1793909766.568, "rms": 0.008, "detections": []}
+{"tick": 40, "file": "tick0040", "time": 1793909767.56, "rms": 0.0091, "detections": [{"class": "person", "conf": 0.283}]}
+{"tick": 41, "file": "tick0041", "time": 1793909768.585, "rms": 0.008, "detections": [{"class": "person", "conf": 0.435}, {"class": "person", "conf": 0.359}]}
+{"tick": 42, "file": "tick0042", "time": 1793909769.644, "rms": 0.0142, "detections": []}
+{"tick": 43, "file": "tick0043", "time": 1793909770.592, "rms": 0.008, "detections": [{"class": "person", "conf": 0.628}]}
+{"tick": 44, "file": "tick0044", "time": 1793909771.559, "rms": 0.0148, "detections": [{"class": "person", "conf": 0.539}]}
+{"tick": 45, "file": "tick0045", "time": 1793909772.586, "rms": 0.0338, "detections": [{"class": "person", "conf": 0.25}]}
+{"tick": 46, "file": "tick0046", "time": 1793909773.579, "rms": 0.0078, "detections": [{"class": "person", "conf": 0.434}]}
+{"tick": 47, "file": "tick0047", "time": 1793909774.571, "rms": 0.0083, "detections": []}
+{"tick": 48, "file": "tick0048", "time": 1793909775.632, "rms": 0.0096, "detections": []}
+{"tick": 49, "file": "tick0049", "time": 1793909776.614, "rms": 0.0072, "detections": []}
+{"tick": 50, "file": "tick0050", "time": 1793909777.579, "rms": 0.0085, "detections": []}
+{"tick": 51, "file": "tick0051", "time": 1793909778.569, "rms": 0.0089, "detections": []}
+{"tick": 52, "file": "tick0052", "time": 1793909779.563, "rms": 0.0083, "detections": []}
+{"tick": 53, "file": "tick0053", "time": 1793909780.586, "rms": 0.0073, "detections": []}
+{"tick": 54, "file": "tick0054", "time": 1793909781.659, "rms": 0.0161, "detections": []}
+{"tick": 55, "file": "tick0055", "time": 1793909782.574, "rms": 0.0475, "detections": []}
+{"tick": 56, "file": "tick0056", "time": 1793909783.563, "rms": 0.0097, "detections": []}
+{"tick": 57, "file": "tick0057", "time": 1793909784.588, "rms": 0.0081, "detections": []}
+{"tick": 58, "file": "tick0058", "time": 1793909785.634, "rms": 0.0081, "detections": []}
+{"tick": 59, "file": "tick0059", "time": 1793909786.593, "rms": 0.1336, "detections": []}
+{"tick": 60, "file": "tick0060", "time": 1793909787.564, "rms": 0.0266, "detections": [{"class": "vase", "conf": 0.47}]}
+{"tick": 61, "file": "tick0061", "time": 1793909788.587, "rms": 0.0216, "detections": [{"class": "vase", "conf": 0.359}]}
+{"tick": 62, "file": "tick0062", "time": 1793909789.58, "rms": 0.0109, "detections": [{"class": "bus", "conf": 0.661}]}
+{"tick": 63, "file": "tick0063", "time": 1793909790.571, "rms": 0.0193, "detections": []}
+{"tick": 64, "file": "tick0064", "time": 1793909791.564, "rms": 0.0224, "detections": [{"class": "vase", "conf": 0.728}]}
+{"tick": 65, "file": "tick0065", "time": 1793909792.601, "rms": 0.0114, "detections": [{"class": "vase", "conf": 0.838}]}
+{"tick": 66, "file": "tick0066", "time": 1793909793.634, "rms": 0.0143, "detections": []}
+{"tick": 67, "file": "tick0067", "time": 1793909794.57, "rms": 0.0255, "detections": []}
+{"tick": 68, "file": "tick0068", "time": 1793909795.561, "rms": 0.042, "detections": []}
+{"tick": 69, "file": "tick0069", "time": 1793909796.642, "rms": 0.0238, "detections": [{"class": "vase", "conf": 0.36}]}
+{"tick": 70, "file": "tick0070", "time": 1793909797.597, "rms": 0.0367, "detections": []}
+{"tick": 71, "file": "tick0071", "time": 1793909798.571, "rms": 0.1695, "detections": [{"class": "train", "conf": 0.425}]}
+{"tick": 72, "file": "tick0072", "time": 1793909799.562, "rms": 0.0816, "detections": [{"class": "train", "conf": 0.386}]}
+{"tick": 73, "file": "tick0073", "time": 1793909800.587, "rms": 0.0917, "detections": []}
+{"tick": 74, "file": "tick0074", "time": 1793909801.579, "rms": 0.0972, "detections": [{"class": "airplane", "conf": 0.254}]}
+{"tick": 75, "file": "tick0075", "time": 1793909802.591, "rms": 0.0737, "detections": []}
+{"tick": 76, "file": "tick0076", "time": 1793909803.563, "rms": 0.0714, "detections": []}
+{"tick": 77, "file": "tick0077", "time": 1793909804.643, "rms": 0.0651, "detections": []}
+{"tick": 78, "file": "tick0078", "time": 1793909805.58, "rms": 0.0654, "detections": []}
+{"tick": 79, "file": "tick0079", "time": 1793909806.572, "rms": 0.0525, "detections": []}
+{"tick": 80, "file": "tick0080", "time": 1793909807.629, "rms": 0.0082, "detections": []}
+{"tick": 81, "file": "tick0081", "time": 1793909808.613, "rms": 0.008, "detections": []}

@@ -1,0 +1,24 @@
+Live dataset: data/pi_captures/live_dataset.npz
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 3-way head)
+Live vocabulary ['background', 'cell phone', 'person'], test set (51, 51, 128, 1)
+Baseline test accuracy before any round: 0.353
+Server ready. Waiting for edge batches
+Round 1: weights from A (77 samples, 405 KB)
+MQTT disconnected (rc=7)
+Reconnect failed: [Errno 61] Connection refused
+Reconnect failed: [Errno 61] Connection refused
+Reconnect failed: [Errno 61] Connection refused
+Round 1: --no-class-check: accepting B with classes ['background', 'person', 'cell phone'] (server ['background', 'cell phone', 'person'])
+Round 1: weights from B (77 samples, 405 KB)
+=== Round 1 FedAvg: test_acc=0.608, agg=0.11s, 2 clients ===
+Round 2: --no-class-check: accepting B with classes ['background', 'person', 'cell phone'] (server ['background', 'cell phone', 'person'])
+Round 2: weights from B (77 samples, 405 KB)
+Round 2: weights from A (77 samples, 405 KB)
+=== Round 2 FedAvg: test_acc=0.647, agg=0.13s, 2 clients ===
+Round 3: --no-class-check: accepting B with classes ['background', 'person', 'cell phone'] (server ['background', 'cell phone', 'person'])
+Round 3: weights from B (77 samples, 405 KB)
+Round 3: weights from A (77 samples, 405 KB)
+=== Round 3 FedAvg: test_acc=0.627, agg=0.14s, 2 clients ===
+Saved trained model -> results/two_pi_20261105/c_swapped_unchecked/trained.keras (3 classes: ['background', 'cell phone', 'person'])
+MQTT disconnected (rc=0)
+Server stopped. 3/3 rounds.

@@ -1,0 +1,2 @@
+[pi-B] shard 1/2: 77 samples
+ERROR: --class-order ["'background", 'person', "cell phone'"] must contain exactly the dataset classes ['background', 'cell phone', 'person']
