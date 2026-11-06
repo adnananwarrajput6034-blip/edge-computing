@@ -127,8 +127,11 @@ data/pi_captures/results/*
 # ...except the post-submission live experiment of 5 Nov 2026, kept public on
 # purpose so the recordings, photos and results can be inspected
 !data/pi_captures/results/live_nov5/
+!data/pi_captures/results/two_pi_20261105/
 !data/pi_captures/session_*/*.wav
 !data/pi_captures/removed_*/*.wav
+# the human labels (relabel.csv) are evidence of who named which clip
+!data/pi_captures/session_*/relabel.csv
 
 # Stray wheel files
 *.whl

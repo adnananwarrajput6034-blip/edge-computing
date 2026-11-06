@@ -30,6 +30,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import socket
 import signal
 import sys
 import time
@@ -236,7 +237,7 @@ def main() -> int:
     for c, n in seen.most_common(12):
         print(f"  {c:<16s} {n:4d}")
     print("\nNext, on the laptop:\n"
-          f"  rsync -az pi1:~/thesis/edge/edgeComputing/{session}/ "
+          f"  rsync -az {socket.gethostname()}:~/thesis/edge/edgeComputing/{session}/ "
           f"data/pi_captures/{session.name}/\n"
           f"  .venv/bin/python scripts/build_dataset.py "
           f"data/pi_captures/{session.name} --summary")

@@ -74,6 +74,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--shard", default=None,
                    help="'i/n' — train on only this node's slice, so two Pis "
                         "hold disjoint data (the non-IID story)")
+    p.add_argument("--class-order", default=None,
+                   help="NEGATIVE CONTROL ONLY: comma-separated class names "
+                        "in a different order than the dataset, e.g. "
+                        "'background,person,cell phone'. This Pi then numbers "
+                        "its labels its own way, as two independently built "
+                        "datasets would. FedAvg averages outputs by position, "
+                        "so the classes get mixed up; the server's class "
+                        "check refuses such updates unless --no-class-check.")
     p.add_argument("--timeout", type=float, default=180.0,
                    help="Give up if no global model arrives in N seconds")
     p.add_argument("--run-dir", default="results/live/strategy_c")
@@ -108,6 +116,18 @@ def main() -> int:
         print(f"[pi-{args.node_id}] shard {args.shard}: {len(audio)} samples",
               flush=True)
 
+    if args.class_order:
+        order = [c.strip() for c in args.class_order.split(",")]
+        if sorted(order) != sorted(classes):
+            print(f"ERROR: --class-order {order} must contain exactly the "
+                  f"dataset classes {classes}", file=sys.stderr)
+            return 1
+        # Same clips, same names; only the numbering changes.
+        y = np.array([order.index(classes[int(v)]) for v in y], dtype=np.int32)
+        print(f"[pi-{args.node_id}] NEGATIVE CONTROL: own class order {order} "
+              f"(dataset order {classes})", flush=True)
+        classes = order
+
     # STFT on the edge — same parameters as B and the servers, so the
     # feature space matches across every strategy.
     stft = STFTProcessor(sample_rate=16000, n_fft=512, hop_length=160,
@@ -141,6 +161,8 @@ def main() -> int:
     round_times: list[dict] = []
     t_start = time.perf_counter()
 
+    server_run = None   # run id of the server this client follows
+    last_round = 0      # highest round already trained
     print(f"[pi-{args.node_id}] waiting for global model...", flush=True)
     while not stop["flag"]:
         try:
@@ -153,11 +175,28 @@ def main() -> int:
             continue
 
         global_weights, meta = deserialize_weights(payload)
+        # Follow one server run only: a stale server on the same broker
+        # would otherwise mix its global models into this run.
+        if server_run is None:
+            server_run = meta.get("run_id")
+            print(f"[pi-{args.node_id}] following server run {server_run}",
+                  flush=True)
+        elif meta.get("run_id") != server_run:
+            print(f"[pi-{args.node_id}] WARNING: ignoring a global model from "
+                  f"another server run ({meta.get('run_id')}, following "
+                  f"{server_run})", flush=True)
+            continue
         if meta.get("done"):
             print(f"[pi-{args.node_id}] server signaled done", flush=True)
             break
 
         rnd = meta["round"]
+        if rnd <= last_round:
+            # A retained message can arrive again after a reconnect.
+            print(f"[pi-{args.node_id}] round {rnd} already trained; "
+                  f"ignoring the repeated global model", flush=True)
+            continue
+        last_round = rnd
         model.set_weights(global_weights)
         # Fresh optimizer each round: FedAvg does not carry optimizer state
         # across rounds, and reusing Adam's momentum after set_weights()
@@ -173,7 +212,10 @@ def main() -> int:
         train_time = time.perf_counter() - t0
 
         payload_out = serialize_weights(model.get_weights(), {
-            "node_id": args.node_id, "round": rnd, "n_samples": len(y_local)})
+            "node_id": args.node_id, "round": rnd, "n_samples": len(y_local),
+            # The label map travels with the weights, so the server can
+            # refuse an update whose output positions mean other classes.
+            "classes": list(classes)})
         if not mqtt_client.publish(weights_topic, payload_out, qos=1):
             print(f"[pi-{args.node_id}] publish failed round {rnd}",
                   file=sys.stderr)

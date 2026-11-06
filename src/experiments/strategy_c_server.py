@@ -89,6 +89,11 @@ def parse_args() -> argparse.Namespace:
                         "UrbanSound8K vocabulary and test set with the "
                         "classes captured live, and resizes the global model "
                         "head to match the Pi clients.")
+    p.add_argument("--no-class-check", action="store_true",
+                   help="NEGATIVE CONTROL ONLY: accept client weights even "
+                        "when the client's class order differs from the "
+                        "server's. FedAvg averages outputs by position, so "
+                        "this silently mixes classes.")
     return p.parse_args()
 
 
@@ -111,6 +116,11 @@ def deserialize_weights(raw: bytes):
 class StrategyCServer:
     def __init__(self, args: argparse.Namespace):
         self.args = args
+        # Tags every global model, so a client can tell this run apart from a
+        # stale server still connected to the same broker (5 Nov 2026: a
+        # leftover server mixed its models into a new run).
+        self.run_id = f"{int(time.time())}-{os.getpid()}"
+        print(f"Server run id {self.run_id}", flush=True)
         self.run_dir = Path(args.run_dir)
         self.run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -179,6 +189,7 @@ class StrategyCServer:
             "local_epochs": self.args.epochs_per_round,
             "local_lr": self.args.local_lr,
             "done": done,
+            "run_id": self.run_id,
         })
         self.mqtt.publish(GLOBAL_TOPIC, payload, qos=1, retain=True)
         self.bytes_broadcast_total += len(payload)
@@ -188,6 +199,25 @@ class StrategyCServer:
         weights, meta = deserialize_weights(payload)
         if meta.get("round") != self.current_round:
             return  # stale weights from a prior round — ignore
+        client_classes = meta.get("classes")
+        if client_classes is None:
+            warned = self.__dict__.setdefault("_no_class_warned", set())
+            if node_id not in warned:  # replay clients send no class list
+                warned.add(node_id)
+                print(f"Round {self.current_round}: note: {node_id} sends no "
+                      f"class list (older or replay client); its label map "
+                      f"is not checked", flush=True)
+        elif list(client_classes) != list(self.classes):
+            if not self.args.no_class_check:
+                print(f"Round {self.current_round}: REFUSED weights from "
+                      f"{node_id}: its classes {client_classes} do not match "
+                      f"the server's {list(self.classes)}. Averaging them "
+                      f"would mix classes; fix the client's class list.",
+                      flush=True)
+                return
+            print(f"Round {self.current_round}: --no-class-check: accepting "
+                  f"{node_id} with classes {client_classes} (server "
+                  f"{list(self.classes)})", flush=True)
         self.per_client_bytes[node_id] = (
             self.per_client_bytes.get(node_id, 0) + len(payload))
         self.per_client_samples[node_id] = meta["n_samples"]

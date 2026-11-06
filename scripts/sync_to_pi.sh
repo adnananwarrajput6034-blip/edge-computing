@@ -24,9 +24,12 @@ echo "syncing code -> $HOST:$REMOTE ${DRY:+(dry run)}"
 rsync -az --itemize-changes $DRY \
   --exclude '__pycache__/' --exclude '*.pyc' \
   --exclude '.venv/' --exclude 'venv/' \
-  --exclude 'data/' --exclude 'results/' --exclude 'models/' \
-  --exclude 'logs/' --exclude 'tensorboard_logs/' --exclude '.git/' \
+  --exclude '/data/' --exclude '/results/' --exclude '/models/' \
+  --exclude '/logs/' --exclude '/tensorboard_logs/' --exclude '.git/' \
   "$LOCAL/src/" "$HOST:$REMOTE/src/"
+# The leading '/' anchors those excludes to the top of src/. Unanchored,
+# 'models/' also skipped the code folder src/server/training/models/, so a
+# fresh Pi (Pi 2, 5 Nov 2026) could not import the AudioCNN.
 rsync -az --itemize-changes $DRY \
   --exclude '__pycache__/' --exclude '*.pyc' \
   "$LOCAL/configs/" "$HOST:$REMOTE/configs/"
