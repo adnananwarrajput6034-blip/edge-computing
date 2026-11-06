@@ -1,0 +1,54 @@
+{
+  "sessions": [
+    "data/pi_captures/session_20261105_205119",
+    "data/pi_captures/session_20261105_211519",
+    "data/pi_captures/session_20261105_212056",
+    "data/pi_captures/session_20261105_212641",
+    "data/pi_captures/session_20261105_212851"
+  ],
+  "rules": {
+    "sessions": [
+      "data/pi_captures/session_20261105_205119",
+      "data/pi_captures/session_20261105_211519",
+      "data/pi_captures/session_20261105_212056",
+      "data/pi_captures/session_20261105_212641",
+      "data/pi_captures/session_20261105_212851"
+    ],
+    "summary": false,
+    "classes": "bottle,laptop",
+    "min_conf": 0.5,
+    "min_rms": "auto",
+    "min_samples": 20,
+    "background": true,
+    "background_max_rms": "auto",
+    "test_fraction": 0.25,
+    "out": "data/pi_captures/room2_dataset.npz"
+  },
+  "sound_thresholds": {
+    "data/pi_captures/session_20261105_205119": 0.012,
+    "data/pi_captures/session_20261105_211519": 0.0224,
+    "data/pi_captures/session_20261105_212056": 0.0127,
+    "data/pi_captures/session_20261105_212641": 0.0217,
+    "data/pi_captures/session_20261105_212851": 0.0115
+  },
+  "reasons": {
+    "background": 144,
+    "no chosen class visible": 14,
+    "named by you": 81,
+    "too quiet": 80,
+    "labelled by YOLO": 50
+  },
+  "path": "data/pi_captures/room2_dataset.npz",
+  "classes": [
+    "background",
+    "bottle",
+    "laptop"
+  ],
+  "n_train": 160,
+  "n_test": 52,
+  "per_class": {
+    "background": 81,
+    "bottle": 81,
+    "laptop": 50
+  }
+}

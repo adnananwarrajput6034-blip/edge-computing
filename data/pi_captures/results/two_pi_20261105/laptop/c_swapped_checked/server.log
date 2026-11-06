@@ -1,0 +1,13 @@
+Server run id 1793904375-15863
+Live dataset: data/pi_captures/live_dataset.npz
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 3-way head)
+Live vocabulary ['background', 'cell phone', 'person'], test set (51, 51, 128, 1)
+Baseline test accuracy before any round: 0.353
+Server ready. Waiting for edge batches
+Round 1: REFUSED weights from B: its classes ['background', 'person', 'cell phone'] do not match the server's ['background', 'cell phone', 'person']. Averaging them would mix classes; fix the client's class list.
+Round 1: weights from A (77 samples, 405 KB)
+Received signal 15 — shutting down
+Saved trained model -> results/two_pi_20261105/c_swapped_checked/trained.keras (3 classes: ['background', 'cell phone', 'person'])
+Received signal 15 — shutting down
+MQTT disconnected (rc=0)
+Server stopped. 0/3 rounds.

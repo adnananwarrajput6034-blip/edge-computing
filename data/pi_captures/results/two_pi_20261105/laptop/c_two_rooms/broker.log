@@ -1,0 +1,22 @@
+1793910680: Info: running mosquitto as user: adnananwarrajput.
+1793910680: mosquitto version 2.1.2 starting
+1793910680: Config loaded from configs/mosquitto_lan.conf.
+1793910680: Bridge support available.
+1793910680: Persistence support available.
+1793910680: TLS support available.
+1793910680: TLS-PSK support available.
+1793910680: Websockets support available.
+1793910680: Opening ipv4 listen socket on port 1883.
+1793910680: mosquitto version 2.1.2 running
+1793910695: New connection from 127.0.0.1:60648 on port 1883.
+1793910695: New client connected from 127.0.0.1:60648 as thesis_edge_server_1793910695 (p4, c1, k60).
+1793910703: New connection from 141.64.161.178:52027 on port 1883.
+1793910703: New client connected from 141.64.161.178:52027 as thesis_edge_A_1793910703 (p4, c1, k60).
+1793910703: New connection from 141.64.161.142:34039 on port 1883.
+1793910703: New client connected from 141.64.161.142:34039 as thesis_edge_B_1793910703 (p4, c1, k60).
+1793910859: Client thesis_edge_server_1793910695 [127.0.0.1:60648] disconnected.
+1793910859: Client thesis_edge_A_1793910703 [141.64.161.178:52027] disconnected.
+1793910859: Client thesis_edge_A_1793910703 [141.64.161.178:52027] disconnected: connection closed by client.
+1793910859: Client thesis_edge_B_1793910703 [141.64.161.142:34039] disconnected.
+1793910859: Client thesis_edge_B_1793910703 [141.64.161.142:34039] disconnected: connection closed by client.
+1793910864: mosquitto version 2.1.2 terminating

@@ -63,3 +63,38 @@ Results with one Pi (154 training and 51 test clips): test accuracy A 0.941, B 0
 C 0.941; sent by the Pi 1,930 / 1,615 / 1,245 KB (KB = 1,000 bytes, as in the thesis; the
 Pi's scripts print KiB = 1,024 bytes, so their output shows 1,885 / 1,577 / 1,216). Live inference with model C (microphone
 only, 118 ticks): background 75, cell phone 35, person 6, unknown 2.
+
+## Two Pis and a second room, evening of 5 Nov 2026 (post-submission)
+
+Pi 2 (also a Raspberry Pi 5) joined, and the one working USB microphone was moved to it. The
+built-in microphones of both webcams fail on Linux ("cannot get freq"), so recordings are made in
+turns; training needs no microphone.
+
+| Folder | What | Used? |
+|---|---|---|
+| `session_20261105_205119` | Bottle shaken close to the camera; YOLO mostly said vase or person | yes, 53 ticks named **bottle by the author** (`relabel.csv`) |
+| `session_20261105_205535` | A still bottle while a **phone video** played bottle sounds | **no**: the visible object was not the sound source |
+| `session_20261105_211519` | Bottle swirled and rolled; camera lying flat, YOLO saw nothing or vase | yes, 28 ticks named bottle by the author |
+| `session_20261105_212056`, `_212641` | Laptop playing music (YOLO: laptop) | yes, 50 ticks labelled by YOLO |
+| `session_20261105_212851` | One minute of a quiet room | background |
+
+Room-2 dataset (rebuild it; `.npz` files are not tracked):
+
+```bash
+.venv/bin/python scripts/build_dataset.py data/pi_captures/session_20261105_205119 \
+    data/pi_captures/session_20261105_211519 data/pi_captures/session_20261105_212056 \
+    data/pi_captures/session_20261105_212641 data/pi_captures/session_20261105_212851 \
+    --classes "bottle,laptop" --min-conf 0.5 --background --min-samples 20 \
+    --out data/pi_captures/room2_dataset.npz
+.venv/bin/python scripts/merge_vocab.py data/pi_captures/live_dataset_NOV5.npz:room1 \
+    data/pi_captures/room2_dataset.npz:room2 --out-dir data/pi_captures --union two_rooms_union.npz
+```
+
+All two-Pi runs (from the laptop and from each Pi), including one failed and one contaminated
+run, are in `results/two_pi_20261105/`; its `laptop/README.md` explains each one.
+- **Two rooms, federated:** 0.777 on 103 test clips.
+- **Each Pi alone:** 0.670 / 0.602.
+- **All data in one place:** 0.845.
+
+On the Pis, the contaminated run and its clean rerun wrote to the same folder, so the Pi-side
+files of `c_swapped_unchecked` belong to the clean rerun.

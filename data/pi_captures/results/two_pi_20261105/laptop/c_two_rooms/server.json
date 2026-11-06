@@ -1,0 +1,59 @@
+{
+  "strategy": "federated",
+  "num_rounds_target": 5,
+  "epochs_per_round": 8,
+  "warm_started": true,
+  "classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "buffer_samples": 314,
+      "test_accuracy": 0.5145630836486816,
+      "train_time_seconds": 0.28,
+      "n_clients": 2
+    },
+    {
+      "round": 2,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6407766938209534,
+      "train_time_seconds": 0.24,
+      "n_clients": 2
+    },
+    {
+      "round": 3,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6990291476249695,
+      "train_time_seconds": 0.74,
+      "n_clients": 2
+    },
+    {
+      "round": 4,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6407766938209534,
+      "train_time_seconds": 0.42,
+      "n_clients": 2
+    },
+    {
+      "round": 5,
+      "buffer_samples": 314,
+      "test_accuracy": 0.7766990065574646,
+      "train_time_seconds": 0.31,
+      "n_clients": 2
+    }
+  ],
+  "per_client_samples": {
+    "B": 160,
+    "A": 154
+  },
+  "per_client_bytes_total": {
+    "B": 2080525,
+    "A": 2080502
+  },
+  "bytes_broadcast_total": 2907189
+}

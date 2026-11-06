@@ -1,0 +1,13 @@
+[pi-B] building 160 local spectrograms...
+[pi-B] local set: X=(160, 51, 128, 1) (1.2s edge STFT), classes=['background', 'bottle', 'cell phone', 'laptop', 'person']
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 5-way head)
+[pi-B] waiting for global model...
+[pi-B] following server run 1793910691-50064
+[pi-B] round 1: trained 8 epoch(s) on 160 samples in 26.9s, sent 406 KB
+[pi-B] round 2: trained 8 epoch(s) on 160 samples in 26.9s, sent 406 KB
+[pi-B] round 3: trained 8 epoch(s) on 160 samples in 31.3s, sent 406 KB
+[pi-B] round 4: trained 8 epoch(s) on 160 samples in 26.9s, sent 406 KB
+[pi-B] round 5: trained 8 epoch(s) on 160 samples in 35.0s, sent 406 KB
+[pi-B] server signaled done
+[pi-B] done: 5 rounds, 2032 KB uploaded, 147.1s local training -> results/live/two_pi_20261105/c_two_rooms/pi_client_B.json
+MQTT disconnected (rc=0)

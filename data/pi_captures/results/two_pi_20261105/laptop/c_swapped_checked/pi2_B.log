@@ -1,0 +1,11 @@
+[pi-B] shard 1/2: 77 samples
+[pi-B] NEGATIVE CONTROL: own class order ['background', 'person', 'cell phone'] (dataset order ['background', 'cell phone', 'person'])
+[pi-B] building 77 local spectrograms...
+[pi-B] local set: X=(77, 51, 128, 1) (1.0s edge STFT), classes=['background', 'person', 'cell phone']
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 3-way head)
+[pi-B] waiting for global model...
+[pi-B] following server run 1793904375-15863
+[pi-B] round 1: trained 8 epoch(s) on 77 samples in 14.3s, sent 405 KB
+[pi-B] server signaled done
+[pi-B] done: 1 rounds, 405 KB uploaded, 14.3s local training -> results/live/two_pi_20261105/c_swapped_checked/pi_client_B.json
+MQTT disconnected (rc=0)
