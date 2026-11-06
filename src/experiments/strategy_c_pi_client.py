@@ -88,6 +88,30 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+class EpochReporter(tf.keras.callbacks.Callback):
+    """After every local epoch: print one line and publish a small progress
+    message on thesis/edge/<id>/metrics, so the server can draw live
+    training curves (TensorBoard) while the Pi is still training. QoS 0:
+    a lost progress message only loses one point on the graph."""
+
+    def __init__(self, mqtt_client, node_id, run_id, rnd, epochs):
+        super().__init__()
+        self.mqtt, self.node_id, self.run_id = mqtt_client, node_id, run_id
+        self.rnd, self.epochs = rnd, epochs
+
+    def on_epoch_end(self, epoch, logs=None):
+        logs = logs or {}
+        msg = {"node_id": self.node_id, "run_id": self.run_id, "round": self.rnd,
+               "epoch": epoch + 1, "epochs": self.epochs,
+               "loss": float(logs.get("loss", float("nan"))),
+               "accuracy": float(logs.get("accuracy", float("nan"))),
+               "time": time.time()}
+        print(f"[pi-{self.node_id}] round {self.rnd} epoch {epoch + 1}/"
+              f"{self.epochs}: loss {msg['loss']:.3f}, train accuracy "
+              f"{msg['accuracy']:.3f}", flush=True)
+        self.mqtt.publish(f"thesis/edge/{self.node_id}/metrics", msg, qos=0)
+
+
 def serialize_weights(weights: list, meta: dict) -> bytes:
     buf = io.BytesIO()
     np.savez_compressed(buf, meta=json.dumps(meta),
@@ -207,8 +231,10 @@ def main() -> int:
                       metrics=["accuracy"])
 
         t0 = time.perf_counter()
+        reporter = EpochReporter(mqtt_client, args.node_id, server_run, rnd,
+                                 meta["local_epochs"])
         model.fit(X_local, y_local, epochs=meta["local_epochs"],
-                  batch_size=args.batch_size, verbose=0)
+                  batch_size=args.batch_size, verbose=0, callbacks=[reporter])
         train_time = time.perf_counter() - t0
 
         payload_out = serialize_weights(model.get_weights(), {

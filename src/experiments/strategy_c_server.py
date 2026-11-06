@@ -33,6 +33,7 @@ import io
 import json
 import os
 import queue
+import threading
 import signal
 import sys
 import time
@@ -193,12 +194,51 @@ class StrategyCServer:
 
         self.mqtt = MQTTClient(broker=args.broker, port=args.port, node_id="server")
 
+        # Live graphs: TensorBoard event files plus one JSON line per point
+        # (epochs.jsonl, easy to load with pandas). Open them with
+        #   .venv/bin/tensorboard --logdir <run-dir or its parent>
+        self.tb_dir = self.run_dir / "tensorboard"
+        self.tb_writers: dict = {}
+        self.tb_lock = threading.Lock()
+        self.points = open(self.run_dir / "epochs.jsonl", "a", buffering=1)
+
+    def _tb(self, name: str):
+        if name not in self.tb_writers:
+            self.tb_writers[name] = tf.summary.create_file_writer(str(self.tb_dir / name))
+        return self.tb_writers[name]
+
+    def log_point(self, who: str, step: int, accuracy: float, loss: float,
+                  kind: str, extra: dict) -> None:
+        """One point on the live graph. step = epochs trained so far by a
+        client, so client curves and the server's test curve share an x-axis."""
+        with self.tb_lock:
+            w = self._tb(who)
+            with w.as_default():
+                tf.summary.scalar("accuracy", accuracy, step=step)
+                tf.summary.scalar("loss", loss, step=step)
+            w.flush()
+            self.points.write(json.dumps({"who": who, "kind": kind, "step": step,
+                                          "accuracy": accuracy, "loss": loss,
+                                          "time": time.time(), **extra}) + "\n")
+
+    def _on_metrics(self, topic: str, payload: bytes) -> None:
+        try:
+            m = json.loads(payload)
+        except ValueError:
+            return
+        if m.get("run_id") != self.run_id:
+            return  # progress from another server run
+        step = (m["round"] - 1) * m["epochs"] + m["epoch"]
+        self.log_point(f"client_{m['node_id']}", step, m["accuracy"], m["loss"],
+                       "train", {"round": m["round"], "epoch": m["epoch"]})
+
     def _on_weights(self, topic: str, payload: bytes) -> None:
         self.inbox.put((topic, payload))
 
     def connect(self) -> bool:
         if not self.mqtt.connect():
             return False
+        self.mqtt.subscribe("thesis/edge/+/metrics", self._on_metrics, qos=0)
         return self.mqtt.subscribe(WEIGHTS_TOPIC, self._on_weights, qos=1)
 
     def broadcast_global(self, round_no: int, done: bool) -> None:
@@ -250,8 +290,11 @@ class StrategyCServer:
         t0 = time.perf_counter()
         new_global = self.aggregator.aggregate(client_weights, sample_counts)
         self.model.set_weights(new_global)
-        _, test_acc = self.model.evaluate(self.X_test, self.y_test, verbose=0)
+        test_loss, test_acc = self.model.evaluate(self.X_test, self.y_test, verbose=0)
         agg_time = time.perf_counter() - t0
+        self.log_point("server_test", self.current_round * self.args.epochs_per_round,
+                       float(test_acc), float(test_loss), "test",
+                       {"round": self.current_round})
 
         self.rounds.append({
             "round": self.current_round,
