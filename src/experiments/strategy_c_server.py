@@ -89,6 +89,11 @@ def parse_args() -> argparse.Namespace:
                         "UrbanSound8K vocabulary and test set with the "
                         "classes captured live, and resizes the global model "
                         "head to match the Pi clients.")
+    p.add_argument("--init-model", default=None,
+                   help="Start the global model from this saved .keras "
+                        "(with --live-dataset) instead of the UrbanSound8K "
+                        "warm start. Used for relay training: run Pi 1 alone, "
+                        "then Pi 2 alone starting from Pi 1's result.")
     p.add_argument("--no-class-check", action="store_true",
                    help="NEGATIVE CONTROL ONLY: accept client weights even "
                         "when the client's class order differs from the "
@@ -140,6 +145,19 @@ class StrategyCServer:
                 ds["audio_test"])[..., np.newaxis].astype(np.float32)
             self.y_test = ds["y_test"]
             self.model, self.warm_started = build_live_model(len(self.classes))
+            if args.init_model:
+                # Relay (sequential) training: continue from the model an
+                # earlier run ended with, e.g. Pi 1 alone, then Pi 2 alone.
+                sidecar = Path(args.init_model).with_suffix(".classes.json")
+                if sidecar.exists():
+                    prev = json.loads(sidecar.read_text())["classes"]
+                    if list(prev) != list(self.classes):
+                        raise SystemExit(f"--init-model classes {prev} differ "
+                                         f"from the dataset's {self.classes}")
+                prev_model = tf.keras.models.load_model(args.init_model)
+                self.model.set_weights(prev_model.get_weights())
+                print(f"Starting from {args.init_model} (relay training)",
+                      flush=True)
             print(f"Live vocabulary {self.classes}, "
                   f"test set {self.X_test.shape}", flush=True)
         else:

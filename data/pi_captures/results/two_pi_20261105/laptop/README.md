@@ -68,3 +68,31 @@ one-Pi 0.941 is two clips and is not evidence that two Pis are better.
 - It stays below the centralized model (0.777 vs 0.845). That gap is the price of non-IID
   data with no raw-data sharing.
 - **Caveat:** one run per model; only 12 laptop and 20 cell phone test clips.
+
+## Relay (sequential) training, 6 Nov 2026 morning
+
+The user's idea: switch one Pi off and train with the other, in turn, instead of averaging both
+at the same time. The server's new `--init-model` option lets phase 2 continue from phase 1's model.
+
+- `relay_1_pi1_alone`: Pi 1 alone on room 1, `--num-clients 1`, 5 rounds × 8 epochs.
+  Per round: 0.621 → 0.670 → 0.670 → 0.641 → **0.680**.
+- `relay_2_pi2_after_pi1`: Pi 2 alone on room 2, starting from phase 1's model, 5 × 8.
+  Per round: 0.456 → 0.583 → 0.602 → 0.388 → **0.621**.
+
+Each phase sends the same per-client compute and upload as the federated run (5 × 406 KiB per Pi),
+but takes twice the wall time, because the Pis take turns. Evaluated on the same 103 test clips
+(`relay_2_pi2_after_pi1/evaluation.json`):
+
+| Model | All | Room 1 | Room 2 | cell phone | person | bottle | laptop |
+|---|---|---|---|---|---|---|---|
+| After Pi 1 (relay phase 1) | 0.680 | **1.000** | 0.365 | 1.00 | 1.00 | 0.00 | 0.00 |
+| After Pi 2 (relay phase 2) | 0.621 | **0.255** | 0.981 | **0.00** | **0.00** | 1.00 | 0.92 |
+| Federated, both at once | **0.777** | 0.725 | 0.827 | 0.45 | 0.83 | 0.80 | 0.67 |
+
+**Reading:**
+- **Catastrophic forgetting.** After training on room 2 only, the model lost room 1 completely:
+  cell phone and person went from 1.00 to 0.00.
+- Federated averaging keeps both rooms, because every round mixes both Pis' updates.
+- Known fixes for relay training: alternate the Pis every round (cyclic training), or replay a
+  few old clips. Neither was tested here.
+- **Caveat:** one run each.

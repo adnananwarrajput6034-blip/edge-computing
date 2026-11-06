@@ -46,6 +46,10 @@ def main() -> int:
     p.add_argument("--epochs", type=int, default=40)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--out", default=None)
+    p.add_argument("--model", action="append", default=[],
+                   help="NAME=PATH of an extra saved model to evaluate (repeatable)")
+    p.add_argument("--skip-train", action="store_true",
+                   help="Only evaluate --federated / --model, train no references")
     a = p.parse_args()
 
     z = np.load(a.union, allow_pickle=True)
@@ -59,8 +63,9 @@ def main() -> int:
     results = {"classes": classes, "test_clips": int(len(yte)),
                "majority_baseline": float(np.bincount(yte).max() / len(yte)),
                "epochs": a.epochs, "seed": a.seed}
-    for name, mask in [("room1_only", rtr == 0), ("room2_only", rtr == 1),
-                       ("centralized_both_rooms", np.ones_like(rtr, dtype=bool))]:
+    refs = [] if a.skip_train else [("room1_only", rtr == 0), ("room2_only", rtr == 1),
+                                    ("centralized_both_rooms", np.ones_like(rtr, dtype=bool))]
+    for name, mask in refs:
         tf.keras.utils.set_random_seed(a.seed)
         model, _ = build_live_model(len(classes), learning_rate=1e-3)
         model.fit(Xtr[mask], ytr[mask], epochs=a.epochs, batch_size=8, verbose=0)
@@ -72,7 +77,12 @@ def main() -> int:
         results["federated_two_pis"] = report(model, Xte, yte, rte, classes)
         f = results["federated_two_pis"]
         print(f"{'federated_two_pis':24s} {f['overall']:.3f}  room1 {f['room1']:.3f}  room2 {f['room2']:.3f}")
-    for k in ["room1_only", "room2_only", "centralized_both_rooms", "federated_two_pis"]:
+    for spec in a.model:
+        name, path = spec.split("=", 1)
+        results[name] = report(tf.keras.models.load_model(path), Xte, yte, rte, classes)
+        f = results[name]
+        print(f"{name:24s} {f['overall']:.3f}  room1 {f['room1']:.3f}  room2 {f['room2']:.3f}")
+    for k in ["room1_only", "room2_only", "centralized_both_rooms", "federated_two_pis"] + [m.split("=", 1)[0] for m in a.model]:
         if k in results:
             print(f"  {k:24s} per class: " + ", ".join(f"{c} {v:.2f}" for c, v in results[k]["per_class"].items()))
     if a.out:
