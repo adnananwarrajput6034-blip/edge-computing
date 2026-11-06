@@ -1,0 +1,25 @@
+{
+  "heard": {
+    "background": 55,
+    "bottle": 4,
+    "unknown": 6,
+    "key": 1,
+    "person": 3
+  },
+  "answers": {
+    "new": 2,
+    "fix": 10,
+    "ok": 3,
+    "skip": 1
+  },
+  "final_classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person",
+    "key",
+    "no"
+  ],
+  "versions": 5
+}

@@ -1,0 +1,88 @@
+[pi-B] building 160 local spectrograms...
+[pi-B] local set: X=(160, 51, 128, 1) (1.2s edge STFT), classes=['background', 'bottle', 'cell phone', 'laptop', 'person']
+warm-started 7 layers from audio_cnn_urbansound8k.keras (new 5-way head)
+[pi-B] waiting for global model...
+[pi-B] following server run 1793979149-2818
+[pi-B] round 1 epoch 1/1: loss 1.097, train accuracy 0.587
+[pi-B] round 1: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 2 epoch 1/1: loss 0.623, train accuracy 0.800
+[pi-B] round 2: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 3 epoch 1/1: loss 0.500, train accuracy 0.831
+[pi-B] round 3: trained 1 epoch(s) on 160 samples in 5.6s, sent 406 KB
+[pi-B] round 4 epoch 1/1: loss 0.444, train accuracy 0.850
+[pi-B] round 4: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 5 epoch 1/1: loss 0.404, train accuracy 0.850
+[pi-B] round 5: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 6 epoch 1/1: loss 0.463, train accuracy 0.856
+[pi-B] round 6: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 7 epoch 1/1: loss 0.410, train accuracy 0.906
+[pi-B] round 7: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 8 epoch 1/1: loss 0.412, train accuracy 0.844
+[pi-B] round 8: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 9 epoch 1/1: loss 0.548, train accuracy 0.844
+[pi-B] round 9: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 10 epoch 1/1: loss 0.368, train accuracy 0.894
+[pi-B] round 10: trained 1 epoch(s) on 160 samples in 5.8s, sent 406 KB
+[pi-B] round 11 epoch 1/1: loss 0.318, train accuracy 0.894
+[pi-B] round 11: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 12 epoch 1/1: loss 0.587, train accuracy 0.800
+[pi-B] round 12: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 13 epoch 1/1: loss 0.367, train accuracy 0.875
+[pi-B] round 13: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 14 epoch 1/1: loss 0.297, train accuracy 0.894
+[pi-B] round 14: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 15 epoch 1/1: loss 0.405, train accuracy 0.863
+[pi-B] round 15: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 16 epoch 1/1: loss 0.391, train accuracy 0.894
+[pi-B] round 16: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 17 epoch 1/1: loss 0.356, train accuracy 0.869
+[pi-B] round 17: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 18 epoch 1/1: loss 0.342, train accuracy 0.887
+[pi-B] round 18: trained 1 epoch(s) on 160 samples in 5.9s, sent 406 KB
+[pi-B] round 19 epoch 1/1: loss 0.356, train accuracy 0.875
+[pi-B] round 19: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 20 epoch 1/1: loss 0.372, train accuracy 0.881
+[pi-B] round 20: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 21 epoch 1/1: loss 0.337, train accuracy 0.875
+[pi-B] round 21: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 22 epoch 1/1: loss 0.305, train accuracy 0.881
+[pi-B] round 22: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 23 epoch 1/1: loss 0.290, train accuracy 0.894
+[pi-B] round 23: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 24 epoch 1/1: loss 0.326, train accuracy 0.875
+[pi-B] round 24: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 25 epoch 1/1: loss 0.313, train accuracy 0.913
+[pi-B] round 25: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 26 epoch 1/1: loss 0.296, train accuracy 0.875
+[pi-B] round 26: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 27 epoch 1/1: loss 0.393, train accuracy 0.856
+[pi-B] round 27: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 28 epoch 1/1: loss 0.301, train accuracy 0.925
+[pi-B] round 28: trained 1 epoch(s) on 160 samples in 6.1s, sent 406 KB
+[pi-B] round 29 epoch 1/1: loss 0.264, train accuracy 0.913
+[pi-B] round 29: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 30 epoch 1/1: loss 0.310, train accuracy 0.913
+[pi-B] round 30: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 31 epoch 1/1: loss 0.184, train accuracy 0.925
+[pi-B] round 31: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 32 epoch 1/1: loss 0.253, train accuracy 0.925
+[pi-B] round 32: trained 1 epoch(s) on 160 samples in 7.3s, sent 406 KB
+[pi-B] round 33 epoch 1/1: loss 0.340, train accuracy 0.900
+[pi-B] round 33: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] round 34 epoch 1/1: loss 0.271, train accuracy 0.900
+[pi-B] round 34: trained 1 epoch(s) on 160 samples in 5.3s, sent 407 KB
+[pi-B] round 35 epoch 1/1: loss 0.172, train accuracy 0.944
+[pi-B] round 35: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 36 epoch 1/1: loss 0.359, train accuracy 0.875
+[pi-B] round 36: trained 1 epoch(s) on 160 samples in 5.2s, sent 407 KB
+[pi-B] round 37 epoch 1/1: loss 0.275, train accuracy 0.881
+[pi-B] round 37: trained 1 epoch(s) on 160 samples in 5.2s, sent 407 KB
+[pi-B] round 38 epoch 1/1: loss 0.173, train accuracy 0.931
+[pi-B] round 38: trained 1 epoch(s) on 160 samples in 5.2s, sent 406 KB
+[pi-B] round 39 epoch 1/1: loss 0.282, train accuracy 0.900
+[pi-B] round 39: trained 1 epoch(s) on 160 samples in 6.4s, sent 407 KB
+[pi-B] round 40 epoch 1/1: loss 0.248, train accuracy 0.913
+[pi-B] round 40: trained 1 epoch(s) on 160 samples in 5.3s, sent 406 KB
+[pi-B] server signaled done
+[pi-B] done: 40 rounds, 16256 KB uploaded, 225.6s local training -> results/live/experiments_20261106/rooms_e1_rep1/pi_client_B.json
+MQTT disconnected (rc=0)

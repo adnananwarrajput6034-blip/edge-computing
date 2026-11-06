@@ -1,0 +1,89 @@
+{"time": 1793986655.609934, "event": "tick", "rms": 0.00794699415564537}
+{"time": 1793986656.6019595, "event": "tick", "rms": 0.007409073878079653}
+{"time": 1793986657.5943835, "event": "tick", "rms": 0.007726561743766069}
+{"time": 1793986658.5864503, "event": "tick", "rms": 0.007548212073743343}
+{"time": 1793986659.610512, "event": "tick", "rms": 0.007585475686937571}
+{"time": 1793986660.6025975, "event": "tick", "rms": 0.007345002610236406}
+{"time": 1793986699.336352, "event": "answer", "by": "human", "action": "new", "name": "key", "ear": "bottle", "conf": 0.8588211536407471, "ticks": 2}
+{"time": 1793986717.9623165, "event": "learned", "reason": "new class", "new_classes": ["key"], "examples": 9, "seconds": 7.2, "train_accuracy": 0.9230769276618958, "old_test_before": 0.8076923076923077, "old_test_after": 0.9038461538461539, "held_back": "0 of 3", "classes": ["background", "bottle", "cell phone", "laptop", "person", "key"], "model": "results/live/teach/models/model_v1.keras"}
+{"time": 1793986717.962401, "event": "tick", "rms": 0.034652452915906906}
+{"time": 1793986718.5261583, "event": "tick", "rms": 0.00778212072327733}
+{"time": 1793986719.51823, "event": "tick", "rms": 0.007898492738604546}
+{"time": 1793986720.542293, "event": "tick", "rms": 0.007783366832882166}
+{"time": 1793986721.5343611, "event": "tick", "rms": 0.008025669492781162}
+{"time": 1793986741.306961, "event": "answer", "by": "human", "action": "fix", "name": "key", "ear": "bottle", "conf": 0.6573607921600342, "ticks": 2}
+{"time": 1793986741.6957698, "event": "tick", "rms": 0.023764528334140778}
+{"time": 1793986742.2717345, "event": "tick", "rms": 0.008226881735026836}
+{"time": 1793986743.263774, "event": "tick", "rms": 0.00792774185538292}
+{"time": 1793986744.2558374, "event": "tick", "rms": 0.008545567281544209}
+{"time": 1793986745.2479098, "event": "tick", "rms": 0.007357570808380842}
+{"time": 1793986746.2719927, "event": "tick", "rms": 0.0073308683931827545}
+{"time": 1793986747.2643833, "event": "tick", "rms": 0.007659226655960083}
+{"time": 1793986748.2564428, "event": "tick", "rms": 0.00742225581780076}
+{"time": 1793986749.2484992, "event": "tick", "rms": 0.007730548270046711}
+{"time": 1793986750.2725918, "event": "tick", "rms": 0.00786291342228651}
+{"time": 1793986751.2646549, "event": "tick", "rms": 0.007926984690129757}
+{"time": 1793986752.2567203, "event": "tick", "rms": 0.007904265075922012}
+{"time": 1793986753.2487855, "event": "tick", "rms": 0.007519325707107782}
+{"time": 1793986754.2728481, "event": "tick", "rms": 0.007737421430647373}
+{"time": 1793986755.2649329, "event": "tick", "rms": 0.007752988487482071}
+{"time": 1793986756.25699, "event": "tick", "rms": 0.007704454939812422}
+{"time": 1793986757.2490673, "event": "tick", "rms": 0.007931267842650414}
+{"time": 1793986758.2731388, "event": "tick", "rms": 0.008241918869316578}
+{"time": 1793986759.2652051, "event": "tick", "rms": 0.007351367734372616}
+{"time": 1793986760.2572627, "event": "tick", "rms": 0.0073497118428349495}
+{"time": 1793986774.5234315, "event": "answer", "by": "human", "action": "skip", "name": "", "ear": "background", "conf": 0.9611664414405823, "ticks": 1}
+{"time": 1793986774.5235243, "event": "tick", "rms": 0.016354406252503395}
+{"time": 1793986775.0743036, "event": "tick", "rms": 0.008371617645025253}
+{"time": 1793986776.0983555, "event": "tick", "rms": 0.008401417173445225}
+{"time": 1793986794.1739156, "event": "answer", "by": "human", "action": "skip", "name": "", "ear": "unknown", "conf": 0.5045610666275024, "ticks": 5}
+{"time": 1793986794.174006, "event": "tick", "rms": 0.06160712242126465}
+{"time": 1793986794.7236574, "event": "tick", "rms": 0.010059583000838757}
+{"time": 1793986813.2448854, "event": "answer", "by": "human", "action": "ok", "name": "bottle", "ear": "bottle", "conf": 0.7967750430107117, "ticks": 5}
+{"time": 1793986822.0455527, "event": "learned", "reason": "named sounds", "new_classes": [], "examples": 7, "seconds": 7.2, "train_accuracy": 0.9261363744735718, "old_test_before": 0.9038461538461539, "old_test_after": 0.9230769230769231, "held_back": "1 of 3", "classes": ["background", "bottle", "cell phone", "laptop", "person", "key"], "model": "results/live/teach/models/model_v2.keras"}
+{"time": 1793986822.045637, "event": "tick", "rms": 0.015092188492417336}
+{"time": 1793986822.5972657, "event": "tick", "rms": 0.007926618680357933}
+{"time": 1793986823.6213365, "event": "tick", "rms": 0.008149871602654457}
+{"time": 1793986824.6134026, "event": "tick", "rms": 0.008187714964151382}
+{"time": 1793986825.6054718, "event": "tick", "rms": 0.008384370245039463}
+{"time": 1793986826.597545, "event": "tick", "rms": 0.00838763639330864}
+{"time": 1793986827.6216154, "event": "tick", "rms": 0.008349587209522724}
+{"time": 1793986841.5531924, "event": "answer", "by": "human", "action": "skip", "name": "", "ear": "unknown", "conf": 0.4149796664714813, "ticks": 3}
+{"time": 1793986841.5532854, "event": "tick", "rms": 0.03140728920698166}
+{"time": 1793986842.1188323, "event": "tick", "rms": 0.009008879773318768}
+{"time": 1793986843.1109731, "event": "tick", "rms": 0.008902907371520996}
+{"time": 1793986858.4078968, "event": "answer", "by": "human", "action": "fix", "name": "key", "ear": "bottle", "conf": 0.6726230382919312, "ticks": 4}
+{"time": 1793986859.0965896, "event": "tick", "rms": 0.08304604887962341}
+{"time": 1793986859.6557448, "event": "tick", "rms": 0.00787148904055357}
+{"time": 1793986860.6478205, "event": "tick", "rms": 0.008123340085148811}
+{"time": 1793986861.6718948, "event": "tick", "rms": 0.008142453618347645}
+{"time": 1793986862.6639552, "event": "tick", "rms": 0.007636489346623421}
+{"time": 1793986863.6562803, "event": "tick", "rms": 0.007529457565397024}
+{"time": 1793986864.6484375, "event": "tick", "rms": 0.007785172201693058}
+{"time": 1793986873.6609225, "event": "answer", "by": "human", "action": "ok", "name": "bottle", "ear": "bottle", "conf": 0.6957893967628479, "ticks": 4}
+{"time": 1793986882.0452209, "event": "learned", "reason": "named sounds", "new_classes": [], "examples": 8, "seconds": 6.9, "train_accuracy": 0.9130434989929199, "old_test_before": 0.9230769230769231, "old_test_after": 0.9423076923076923, "held_back": "1 of 3", "classes": ["background", "bottle", "cell phone", "laptop", "person", "key"], "model": "results/live/teach/models/model_v3.keras"}
+{"time": 1793986882.045301, "event": "tick", "rms": 0.035646066069602966}
+{"time": 1793986882.601301, "event": "tick", "rms": 0.007848183624446392}
+{"time": 1793986883.625373, "event": "tick", "rms": 0.00761828338727355}
+{"time": 1793986884.6174462, "event": "tick", "rms": 0.007475420832633972}
+{"time": 1793986885.60951, "event": "tick", "rms": 0.007573400158435106}
+{"time": 1793986886.6015766, "event": "tick", "rms": 0.008512125350534916}
+{"time": 1793986887.6256409, "event": "tick", "rms": 0.00797145627439022}
+{"time": 1793986888.6177166, "event": "tick", "rms": 0.0083260927349329}
+{"time": 1793986902.2675436, "event": "answer", "by": "human", "action": "fix", "name": "key", "ear": "bottle", "conf": 0.9836883544921875, "ticks": 1}
+{"time": 1793986902.4504428, "event": "tick", "rms": 0.15550079941749573}
+{"time": 1793986903.0187354, "event": "tick", "rms": 0.007581779267638922}
+{"time": 1793986904.0107663, "event": "tick", "rms": 0.008064638823270798}
+{"time": 1793986905.0028245, "event": "tick", "rms": 0.0078124599531292915}
+{"time": 1793986906.02691, "event": "tick", "rms": 0.00780602777376771}
+{"time": 1793986916.317648, "event": "answer", "by": "human", "action": "fix", "name": "key", "ear": "bottle", "conf": 0.6320914030075073, "ticks": 2}
+{"time": 1793986916.678796, "event": "tick", "rms": 0.04649483785033226}
+{"time": 1793986917.227694, "event": "tick", "rms": 0.0089626619592309}
+{"time": 1793986918.251746, "event": "tick", "rms": 0.008414684794843197}
+{"time": 1793986919.2438083, "event": "tick", "rms": 0.008465129882097244}
+{"time": 1793986920.2358747, "event": "tick", "rms": 0.008676420897245407}
+{"time": 1793986921.2279441, "event": "tick", "rms": 0.008551129139959812}
+{"time": 1793986922.2523408, "event": "tick", "rms": 0.008583411574363708}
+{"time": 1793986923.2444103, "event": "tick", "rms": 0.008574672974646091}
+{"time": 1793986924.2364159, "event": "tick", "rms": 0.008578293956816196}
+{"time": 1793986943.9991922, "event": "learned", "reason": "named sounds at the end", "new_classes": [], "examples": 3, "seconds": 7.7, "train_accuracy": 0.9197860956192017, "old_test_before": 0.9423076923076923, "old_test_after": 0.9423076923076923, "held_back": "1 of 3", "classes": ["background", "bottle", "cell phone", "laptop", "person", "key"], "model": "results/live/teach/models/model_v4.keras"}

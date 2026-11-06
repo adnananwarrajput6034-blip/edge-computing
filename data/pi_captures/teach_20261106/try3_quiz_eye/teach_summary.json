@@ -1,0 +1,27 @@
+{
+  "heard": {
+    "bottle": 8,
+    "background": 1,
+    "unknown": 2
+  },
+  "answers": {
+    "new": 1,
+    "fix": 4,
+    "skip": 3,
+    "ok": 2
+  },
+  "final_classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person",
+    "key"
+  ],
+  "eye_knows": [
+    "(nothing)",
+    "bottle",
+    "key"
+  ],
+  "versions": 4
+}

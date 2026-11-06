@@ -98,3 +98,12 @@ run, are in `results/two_pi_20261105/`; its `laptop/README.md` explains each one
 
 On the Pis, the contaminated run and its clean rerun wrote to the same folder, so the Pi-side
 files of `c_swapped_unchecked` belong to the clean rerun.
+
+## Experiment day and live teaching, 6 Nov 2026 (post-submission)
+
+- `results/experiments_20261106/`: live graphs (TensorBoard), repeated two-room runs, and
+  client-drift remedies (fewer local epochs, smaller learning rate). See its README. The
+  federated two-room result is **unstable at 8 local epochs and LR 1e-3** (finals
+  0.41–0.78, mean 0.665); a 10× smaller local learning rate made it climb steadily.
+- `teach_20261106/`: four live teaching sessions on Pi 2 (`pi_teach.py`: ear, eye and a
+  human; YOLO in a separate process). See its README.

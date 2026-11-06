@@ -1,0 +1,94 @@
+{
+  "strategy": "federated",
+  "num_rounds_target": 10,
+  "epochs_per_round": 4,
+  "warm_started": true,
+  "classes": [
+    "background",
+    "bottle",
+    "cell phone",
+    "laptop",
+    "person"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "buffer_samples": 314,
+      "test_accuracy": 0.5339806079864502,
+      "train_time_seconds": 0.2,
+      "n_clients": 2
+    },
+    {
+      "round": 2,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6699029207229614,
+      "train_time_seconds": 0.2,
+      "n_clients": 2
+    },
+    {
+      "round": 3,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6504854559898376,
+      "train_time_seconds": 0.21,
+      "n_clients": 2
+    },
+    {
+      "round": 4,
+      "buffer_samples": 314,
+      "test_accuracy": 0.7184466123580933,
+      "train_time_seconds": 0.13,
+      "n_clients": 2
+    },
+    {
+      "round": 5,
+      "buffer_samples": 314,
+      "test_accuracy": 0.8058252334594727,
+      "train_time_seconds": 0.12,
+      "n_clients": 2
+    },
+    {
+      "round": 6,
+      "buffer_samples": 314,
+      "test_accuracy": 0.7281553149223328,
+      "train_time_seconds": 0.14,
+      "n_clients": 2
+    },
+    {
+      "round": 7,
+      "buffer_samples": 314,
+      "test_accuracy": 0.7864077687263489,
+      "train_time_seconds": 0.14,
+      "n_clients": 2
+    },
+    {
+      "round": 8,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6213592290878296,
+      "train_time_seconds": 0.13,
+      "n_clients": 2
+    },
+    {
+      "round": 9,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6893203854560852,
+      "train_time_seconds": 0.13,
+      "n_clients": 2
+    },
+    {
+      "round": 10,
+      "buffer_samples": 314,
+      "test_accuracy": 0.6213592290878296,
+      "train_time_seconds": 0.13,
+      "n_clients": 2
+    }
+  ],
+  "per_client_samples": {
+    "A": 154,
+    "B": 160
+  },
+  "per_client_bytes_total": {
+    "A": 4161719,
+    "B": 4161471
+  },
+  "bytes_broadcast_total": 4983522
+}
